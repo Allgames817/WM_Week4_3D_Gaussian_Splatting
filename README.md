@@ -125,17 +125,10 @@ WM_Week4_3D_Gaussian_Splatting/
 │   ├── validation/         # 独立接口、指标审计、冻结轨迹
 │   └── package_validation/ # 本次整理的校验
 ├── SOURCE_INDEX.md
-├── SOURCES.md
-└── verify_artifacts.py
+└── SOURCES.md
 ```
 
-阅读不需要 GPU。Python 3.10+ 可检查归档哈希和本地链接；安装 NumPy 后可以复算四组 initial/final 的训练与验证指标，并核对重载和轨迹数据：
-
-```powershell
-python verify_artifacts.py
-python -m pip install numpy
-python verify_artifacts.py --recompute-metrics
-```
+阅读不需要 GPU。仓库保留浮点预测、合成目标、固定划分和指标报告，可按[评估口径](05_Multi_View_Fitting_and_Evaluation.md)自行复算。整理时的哈希、链接及指标检查结果见[归档校验](results/PACKAGE_CHECKS.md)；校验工具仅在本地使用，不随仓库分发。
 
 下载仓库后，打开 [adaptive 轨迹 HTML](results/validation/adaptive_review/index.html)可浏览保存的 61 帧局部往返轨迹；GitHub 文件页不会执行该 HTML。完整过程没有在线训练或状态更新。
 

@@ -22,7 +22,7 @@
 
 本次整理又以只读方式核对其 66 个输入文件哈希，全部匹配；各模块检查所登记的源码身份也匹配。两份冻结渲染报告登记的六个产物哈希与关联 audit 哈希均匹配。详细范围见[本次来源校验](results/package_validation/source_identity.json)。
 
-归档另提供 [verify_artifacts.py](verify_artifacts.py)，让读者只用 NumPy 就能复算四组、两个阶段、训练/验证共 16 组汇总指标，并核对 contrast-mask、独立重载数组与保存轨迹。本次运行结果见[归档校验](results/PACKAGE_CHECKS.md)。哈希一致支持文件身份，不独立证明历史训练究竟如何执行。
+整理时使用本地工具复算了四组、两个阶段、训练/验证共 16 组汇总指标，并核对 contrast-mask、独立重载数组与保存轨迹。原始浮点输入和[归档校验结果](results/PACKAGE_CHECKS.md)随包保留，校验工具不分发。哈希一致支持文件身份，不独立证明历史训练究竟如何执行。
 
 ## 冻结真实模型
 

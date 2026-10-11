@@ -20,7 +20,7 @@
 
 ## 本次归档复核
 
-使用 [verify_artifacts.py](../verify_artifacts.py)执行标准库检查及 NumPy 浮点复算，结果记录在 [artifact_audit.json](package_validation/artifact_audit.json)。检查内容包括：
+整理时使用本地工具执行标准库检查及 NumPy 浮点复算，结果记录在 [artifact_audit.json](package_validation/artifact_audit.json)。校验工具不随仓库分发，检查内容包括：
 
 - 767 个复制文件的 SHA-256 和字节数、JSON 可解析性、本地 Markdown/HTML 文件链接。
 - 全部 16 个 Markdown 文件中的公式兼容性：检查代码围栏、数学定界符、花括号和环境配对，并拦截本仓库已遇到的宏及裸尖括号问题。
@@ -35,18 +35,13 @@
 
 2026-10-12 修正首页、协方差专题和遮挡合成专题：将 `\operatorname{diag}` 改为 `\mathrm{diag}`，将乘积下标中的裸 `<` 改为 `\lt`，将紧凑分数改为带完整花括号的写法。公式含义不变。
 
-扫描全部 16 个 `.md` 文件，提取五个文档中的 16 个行内/块级公式，使用本地 MathJax 3.2.2（base、ams）逐一转换为 SVG，全部通过且无渲染错误节点。[math_render_check.json](package_validation/math_render_check.json)保存公式、引擎版本和对应文档哈希。
+扫描全部 16 个 `.md` 文件，提取五个文档中的 16 个行内/块级公式，使用本地 MathJax 3.2.2（base、ams）逐一转换为 SVG，全部通过且无渲染错误节点。[math_render_check.json](package_validation/math_render_check.json)保存当时检查的公式、引擎版本和文档哈希；后续说明文字调整不改写该历史记录。
 
-`verify_artifacts.py` 现在包含静态公式检查，避免再次引入上述兼容性问题。静态检查不是完整 TeX 渲染器；本次 MathJax 渲染是单独执行的检查，也不代表已发布并检查远程 GitHub 页面。
+本地校验还包含静态公式检查，避免再次引入上述兼容性问题。静态检查不是完整 TeX 渲染器；本次 MathJax 渲染是单独执行的检查，也不代表已发布并检查远程 GitHub 页面。
 
-## 可复查命令
+## 复核材料
 
-```powershell
-python verify_artifacts.py
-python verify_artifacts.py --recompute-metrics
-```
-
-第二条需要 NumPy。本地已有环境可用 `H:\anaconda3\envs\wm_gsplat\python.exe` 执行，读者也可使用自己的 Python 3.10+ 环境。只有输出 `status: PASS` 才表示该次检查通过。
+读者可使用保存的场景、浮点预测与报告，按[指标定义](../05_Multi_View_Fitting_and_Evaluation.md)自行复算。归档文件身份见 [source_manifest.json](source_manifest.json)，本地校验结果以报告中的 `status` 和检查范围为准。
 
 包大小和最大文件的数值以检查运行时为准；输出报告首次写入时尚不计入自身大小，之后只读检查会把该报告纳入统计。哈希校验只绑定复制产物，新增说明和校验报告由本次整理生成。
 

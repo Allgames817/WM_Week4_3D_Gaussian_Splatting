@@ -15,3 +15,4 @@ local_paths.json
 Thumbs.db
 .DS_Store
 /UPLOAD.md
+/verify_artifacts.py
