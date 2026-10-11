@@ -23,12 +23,21 @@
 使用 [verify_artifacts.py](../verify_artifacts.py)执行标准库检查及 NumPy 浮点复算，结果记录在 [artifact_audit.json](package_validation/artifact_audit.json)。检查内容包括：
 
 - 767 个复制文件的 SHA-256 和字节数、JSON 可解析性、本地 Markdown/HTML 文件链接。
+- 全部 16 个 Markdown 文件中的公式兼容性：检查代码围栏、数学定界符、花括号和环境配对，并拦截本仓库已遇到的宏及裸尖括号问题。
 - 四组实验 × initial/final × train/val，共 16 组 SSE、MSE、PSNR、最大误差和 target-contrast 区域指标。
 - 指标同时与保存 metrics、训练报告和独立历史审计比较；浮点先转 float64，再做差与汇总。
 - 四组独立重载 RGB 与对应 final 数组一致，配对实验的共同起点图像一致。
 - 两组轨迹各 61 帧文件齐全，浮点起点/返回一致，起点与对应 final 视角 0 匹配；登记的 AVI、NPZ、耗时 CSV 哈希和 audit 关联匹配。
 
 没有通过 PNG 反算指标，也没有加载 Torch checkpoint。原始场景和全部复算输入已在包内；无需本机 `Daily` 路径、CUDA 或 gsplat。
+
+## 公式渲染复核
+
+2026-10-12 修正首页、协方差专题和遮挡合成专题：将 `\operatorname{diag}` 改为 `\mathrm{diag}`，将乘积下标中的裸 `<` 改为 `\lt`，将紧凑分数改为带完整花括号的写法。公式含义不变。
+
+扫描全部 16 个 `.md` 文件，提取五个文档中的 16 个行内/块级公式，使用本地 MathJax 3.2.2（base、ams）逐一转换为 SVG，全部通过且无渲染错误节点。[math_render_check.json](package_validation/math_render_check.json)保存公式、引擎版本和对应文档哈希。
+
+`verify_artifacts.py` 现在包含静态公式检查，避免再次引入上述兼容性问题。静态检查不是完整 TeX 渲染器；本次 MathJax 渲染是单独执行的检查，也不代表已发布并检查远程 GitHub 页面。
 
 ## 可复查命令
 

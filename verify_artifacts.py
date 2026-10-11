@@ -86,6 +86,70 @@ def package_check(errors):
     return {"files": count, "bytes": size, "largest_file": largest[1], "largest_file_bytes": largest[0]}
 
 
+def math_syntax_check(errors):
+    """Check this repository's conservative GitHub math conventions, not all TeX."""
+    documents = expressions = 0
+    for path in sorted(ROOT.rglob("*.md")):
+        if ".git" in path.parts:
+            continue
+        documents += 1
+        content = path.read_text(encoding="utf-8-sig")
+        formulas = []
+        fence = None
+        math_lines = []
+        start = 0
+        for number, line in enumerate(content.splitlines(), 1):
+            marker = re.match(r"^\s{0,3}(`{3,}|~{3,})(.*)$", line)
+            if fence is not None:
+                if marker and marker[1][0] == fence[0] and len(marker[1]) >= len(fence) and not marker[2].strip():
+                    if math_lines is not None:
+                        formulas.append((start, "\n".join(math_lines)))
+                    fence = None
+                elif math_lines is not None:
+                    math_lines.append(line)
+                continue
+            if marker:
+                fence = marker[1]
+                start = number
+                math_lines = [] if marker[2].strip() == "math" else None
+                continue
+            # This package uses single-dollar inline math, outside inline code.
+            prose = re.sub(r"`+[^`]*`+", "", line)
+            delimiters = list(re.finditer(r"(?<!\\)\$", prose))
+            if len(delimiters) % 2:
+                errors.append(f"Unpaired math delimiter in {path.relative_to(ROOT)}:{number}")
+            for left, right in zip(delimiters[::2], delimiters[1::2]):
+                formulas.append((number, prose[left.end():right.start()]))
+        if fence is not None:
+            errors.append(f"Unclosed code fence in {path.relative_to(ROOT)}:{start}")
+        for number, formula in formulas:
+            expressions += 1
+            location = f"{path.relative_to(ROOT)}:{number}"
+            if re.search(r"\\operatorname\b", formula):
+                errors.append(f"GitHub macro compatibility: use \\mathrm instead of \\operatorname in {location}")
+            if "<" in formula or ">" in formula:
+                errors.append(f"Use \\lt or \\gt instead of raw angle brackets in math: {location}")
+            if re.search(r"\\(?:tfrac|dfrac|frac)\s*(?!\s*\{)", formula):
+                errors.append(f"Use explicit fraction braces in math: {location}")
+            depth = 0
+            for brace in re.findall(r"(?<!\\)[{}]", formula):
+                depth += 1 if brace == "{" else -1
+                if depth < 0:
+                    break
+            if depth != 0:
+                errors.append(f"Unbalanced math braces in {location}")
+            environments = []
+            for action, name in re.findall(r"\\(begin|end)\{([^{}]+)\}", formula):
+                if action == "begin":
+                    environments.append(name)
+                elif not environments or environments.pop() != name:
+                    errors.append(f"Mismatched math environment in {location}")
+            if environments:
+                errors.append(f"Unclosed math environment in {location}")
+    return {"markdown_files_checked": documents, "expressions_checked": expressions,
+            "scope": "Static GitHub compatibility conventions and delimiter checks; not a full TeX renderer."}
+
+
 def numeric_close(actual, expected):
     if actual is None or expected is None:
         return actual is None and expected is None
@@ -196,7 +260,8 @@ def main():
     args = parser.parse_args()
     errors = []
     report = {"schema_version": 1, "package": ROOT.name}
-    checks = [("archive", archive_check), ("documents", document_check), ("package_files", package_check)]
+    checks = [("archive", archive_check), ("documents", document_check),
+              ("math_syntax", math_syntax_check), ("package_files", package_check)]
     if args.recompute_metrics:
         checks.append(("metrics", recompute_metrics))
     for name, check in checks:
@@ -211,7 +276,7 @@ def main():
     payload = json.dumps(report, ensure_ascii=False, indent=2, allow_nan=False) + "\n"
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)
-        args.output.write_text(payload, encoding="utf-8")
+        args.output.write_text(payload, encoding="utf-8", newline="\n")
     print(payload, end="")
     return 0 if not errors else 1
 

@@ -45,11 +45,11 @@ Adam updates → optional split / clone / prune
 held-out evaluation / reload / frozen replay / audit
 ```
 
-三维形状由 $\Sigma_w=R(q)\operatorname{diag}(s^2)R(q)^\top$ 表示。投影后的高斯响应给出逐像素 alpha；按前后顺序合成：
+三维形状由 $\Sigma_w=R(q)\mathrm{diag}(s^2)R(q)^\top$ 表示。投影后的高斯响应给出逐像素 alpha；按前后顺序合成：
 
 ```math
-\alpha_i(p)=o_i\exp\left[-\frac12(p-\mu_i)^\top\Sigma_{2d,i}^{-1}(p-\mu_i)\right],
-\qquad T_i(p)=\prod_{j<i}(1-\alpha_j(p)).
+\alpha_i(p)=o_i\exp\left[-\frac{1}{2}(p-\mu_i)^\top\Sigma_{2d,i}^{-1}(p-\mu_i)\right],
+\qquad T_i(p)=\prod_{j\lt i}(1-\alpha_j(p)).
 ```
 
 ```math

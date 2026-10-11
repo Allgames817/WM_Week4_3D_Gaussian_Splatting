@@ -7,11 +7,16 @@
   "documents": {
     "markdown_files": 16,
     "html_files": 23,
-    "local_links": 630
+    "local_links": 631
+  },
+  "math_syntax": {
+    "markdown_files_checked": 16,
+    "expressions_checked": 16,
+    "scope": "Static GitHub compatibility conventions and delimiter checks; not a full TeX renderer."
   },
   "package_files": {
-    "files": 788,
-    "bytes": 22144402,
+    "files": 789,
+    "bytes": 22153070,
     "largest_file": "results/validation/adaptive_review/trajectory_float.npz",
     "largest_file_bytes": 2033107
   },

@@ -9,8 +9,8 @@
 基础 opacity 是高斯参数；逐像素 alpha 是 opacity 乘以该像素处的二维响应；最终颜色权重还要乘以前层透射率。
 
 ```math
-\alpha_i(p)=o_i\exp[-\tfrac12(p-\mu_i)^\top\Sigma_i^{-1}(p-\mu_i)],
-\quad T_i(p)=\prod_{j<i}(1-\alpha_j(p)),\quad w_i(p)=T_i(p)\alpha_i(p).
+\alpha_i(p)=o_i\exp\left[-\frac{1}{2}(p-\mu_i)^\top\Sigma_i^{-1}(p-\mu_i)\right],
+\quad T_i(p)=\prod_{j\lt i}(1-\alpha_j(p)),\quad w_i(p)=T_i(p)\alpha_i(p).
 ```
 
 第一层之前没有遮挡，因此 $T_1=1$。最后剩余透射率 $R=\prod_i(1-\alpha_i)$ 分配给背景：

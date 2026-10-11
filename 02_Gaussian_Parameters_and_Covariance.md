@@ -7,9 +7,9 @@
 ## 从尺度与旋转构造形状
 
 ```math
-\Sigma_w=R_g\operatorname{diag}(s_x^2,s_y^2,s_z^2)R_g^\top,
+\Sigma_w=R_g\mathrm{diag}(s_x^2,s_y^2,s_z^2)R_g^\top,
 \qquad
-g(x)=\exp\left[-\frac12(x-\mu)^\top\Sigma_w^{-1}(x-\mu)\right].
+g(x)=\exp\left[-\frac{1}{2}(x-\mu)^\top\Sigma_w^{-1}(x-\mu)\right].
 ```
 
 尺度是标准差，所以构造协方差时需要平方；已经激活的尺度不再做 exp。`R_g` 是高斯自身旋转。中心没有包含在协方差内，平移中心不应顺带旋转或缩放协方差。

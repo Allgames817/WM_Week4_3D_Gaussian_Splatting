@@ -1,0 +1,116 @@
+{
+  "engine": "MathJax 3.2.2",
+  "packages": [
+    "base",
+    "ams"
+  ],
+  "scope": "Local TeX-to-SVG rendering of every math expression in Week4 Markdown. GitHub-specific macro and angle-bracket conventions are checked separately by verify_artifacts.py.",
+  "source_sha256": {
+    "02_Gaussian_Parameters_and_Covariance.md": "724db31da79acce3e29af746f0956fba38466328a82914f8ee803e552e9da616",
+    "03_Camera_Projection_and_Screen_Footprint.md": "bd2e6687d79d0e71e6bddb35c9c7d0287102976a2620e6d1e11fa05de3abe040",
+    "04_Visibility_and_Alpha_Compositing.md": "82989118e7e2c0f351a29f8294a3eda0cea12f36dfc7fad895c295f935b70955",
+    "05_Multi_View_Fitting_and_Evaluation.md": "98e1198584541b6f99e662868d987fe7511f13d116972bc5c865b362657e5c9f",
+    "README.md": "260f90f6fdc2173601f5ae2eef7d7212e1d3f7b1a11a4fed950edfbedb2c8917"
+  },
+  "markdown_files_checked": 16,
+  "expressions": [
+    {
+      "file": "02_Gaussian_Parameters_and_Covariance.md",
+      "formula": "\\Sigma_w=R_g\\mathrm{diag}(s_x^2,s_y^2,s_z^2)R_g^\\top,\n\\qquad\ng(x)=\\exp\\left[-\\frac{1}{2}(x-\\mu)^\\top\\Sigma_w^{-1}(x-\\mu)\\right].",
+      "display": true,
+      "status": "PASS"
+    },
+    {
+      "file": "02_Gaussian_Parameters_and_Covariance.md",
+      "formula": "\\mu",
+      "display": false,
+      "status": "PASS"
+    },
+    {
+      "file": "02_Gaussian_Parameters_and_Covariance.md",
+      "formula": "\\Sigma",
+      "display": false,
+      "status": "PASS"
+    },
+    {
+      "file": "03_Camera_Projection_and_Screen_Footprint.md",
+      "formula": "\\mu_c=R_{cw}\\mu_w+t_{cw},\\qquad\n\\Sigma_c=R_{cw}\\Sigma_wR_{cw}^\\top.",
+      "display": true,
+      "status": "PASS"
+    },
+    {
+      "file": "03_Camera_Projection_and_Screen_Footprint.md",
+      "formula": "u=f_xX/Z+c_x,\\quad v=f_yY/Z+c_y,\\qquad\nJ=\\begin{bmatrix}\nf_x/Z&0&-f_xX/Z^2\\\\\n0&f_y/Z&-f_yY/Z^2\n\\end{bmatrix}.",
+      "display": true,
+      "status": "PASS"
+    },
+    {
+      "file": "03_Camera_Projection_and_Screen_Footprint.md",
+      "formula": "\\Sigma_{2d,raw}=J\\Sigma_cJ^\\top,\\qquad\n\\Sigma_{2d}=\\Sigma_{2d,raw}+\\epsilon_{2d}I.",
+      "display": true,
+      "status": "PASS"
+    },
+    {
+      "file": "03_Camera_Projection_and_Screen_Footprint.md",
+      "formula": "[R_{cw}|t_{cw}]",
+      "display": false,
+      "status": "PASS"
+    },
+    {
+      "file": "03_Camera_Projection_and_Screen_Footprint.md",
+      "formula": "(X,Y,Z)",
+      "display": false,
+      "status": "PASS"
+    },
+    {
+      "file": "04_Visibility_and_Alpha_Compositing.md",
+      "formula": "\\alpha_i(p)=o_i\\exp\\left[-\\frac{1}{2}(p-\\mu_i)^\\top\\Sigma_i^{-1}(p-\\mu_i)\\right],\n\\quad T_i(p)=\\prod_{j\\lt i}(1-\\alpha_j(p)),\\quad w_i(p)=T_i(p)\\alpha_i(p).",
+      "display": true,
+      "status": "PASS"
+    },
+    {
+      "file": "04_Visibility_and_Alpha_Compositing.md",
+      "formula": "C=\\sum_iw_ic_i+Rc_{bg},\\qquad A=1-R,\\qquad\\sum_iw_i+R=1.",
+      "display": true,
+      "status": "PASS"
+    },
+    {
+      "file": "04_Visibility_and_Alpha_Compositing.md",
+      "formula": "T_1=1",
+      "display": false,
+      "status": "PASS"
+    },
+    {
+      "file": "04_Visibility_and_Alpha_Compositing.md",
+      "formula": "R=\\prod_i(1-\\alpha_i)",
+      "display": false,
+      "status": "PASS"
+    },
+    {
+      "file": "05_Multi_View_Fitting_and_Evaluation.md",
+      "formula": "\\mathrm{SSE}=\\sum_{v,p,c}(\\hat C_{vpc}-C_{vpc})^2,\\qquad\n\\mathrm{MSE}=\\frac{\\mathrm{SSE}}{\\text{RGB scalar count}},\\qquad\n\\mathrm{PSNR}=-10\\log_{10}(\\mathrm{MSE}).",
+      "display": true,
+      "status": "PASS"
+    },
+    {
+      "file": "README.md",
+      "formula": "\\alpha_i(p)=o_i\\exp\\left[-\\frac{1}{2}(p-\\mu_i)^\\top\\Sigma_{2d,i}^{-1}(p-\\mu_i)\\right],\n\\qquad T_i(p)=\\prod_{j\\lt i}(1-\\alpha_j(p)).",
+      "display": true,
+      "status": "PASS"
+    },
+    {
+      "file": "README.md",
+      "formula": "\\hat C(p)=\\sum_i T_i(p)\\alpha_i(p)c_i+\n\\left[\\prod_i(1-\\alpha_i(p))\\right]c_{bg}.",
+      "display": true,
+      "status": "PASS"
+    },
+    {
+      "file": "README.md",
+      "formula": "\\Sigma_w=R(q)\\mathrm{diag}(s^2)R(q)^\\top",
+      "display": false,
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "status": "PASS"
+}
