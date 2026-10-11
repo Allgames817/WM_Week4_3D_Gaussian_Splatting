@@ -28,7 +28,11 @@
 
 入口实验使用三个手工高斯。它将五类参数、相机、背景送入真实 gsplat，导出 RGB、总 alpha 与浮点数组，没有优化器更新。
 
-![三个手工高斯的渲染](figures/renderer_rgb.png)
+<p align="center">
+  <img src="figures/renderer_rgb.png" alt="三个手工高斯在黑色背景上的 RGB 渲染" width="288" height="192">
+  <br>
+  <sub>三个手工高斯的 RGB 渲染 · 原图 96 × 64，放大 3 倍展示</sub>
+</p>
 
 保存的 [CPU 报告](results/renderer_entry/checks/check_cpu.json)为 8/8；[CUDA 模式报告](results/renderer_entry/checks/check_cuda.json)为 12/12，其中重做 8 项 CPU 检查，新增 4 项 GPU 检查。不能把这两份报告当成 20 项不同检查。
 
