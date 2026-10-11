@@ -1,0 +1,112 @@
+{
+  "timestamp_utc": "2026-10-11T11:59:23.573102+00:00",
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "H:\\anaconda3\\envs\\wm_gsplat\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "gsplat": "1.5.3+pt24cu124",
+    "numpy": "1.26.4",
+    "Pillow": "10.4.0"
+  },
+  "exercise_sha256": "38d52c09662dc40b1d240f1d73380a159e27cf77e46c4cb20c32036ee4363699",
+  "optimizer_steps": 0,
+  "status": "PASSED",
+  "mode": "cpu",
+  "expected_tests": 18,
+  "passed": 18,
+  "executed": 18,
+  "tests": [
+    {
+      "id": "R1",
+      "name": "test_r1_identity",
+      "passed": true
+    },
+    {
+      "id": "R2",
+      "name": "test_r2_z90_direction",
+      "passed": true
+    },
+    {
+      "id": "R3",
+      "name": "test_r3_norm_and_sign",
+      "passed": true
+    },
+    {
+      "id": "R4",
+      "name": "test_r4_batch_orthogonality",
+      "passed": true
+    },
+    {
+      "id": "R5",
+      "name": "test_r5_autograd",
+      "passed": true
+    },
+    {
+      "id": "R6",
+      "name": "test_r6_cyclic_float32",
+      "passed": true
+    },
+    {
+      "id": "C1",
+      "name": "test_c1_axis_scales_squared",
+      "passed": true
+    },
+    {
+      "id": "C2",
+      "name": "test_c2_rotation_and_cross_term",
+      "passed": true
+    },
+    {
+      "id": "C3",
+      "name": "test_c3_batch_spd_and_eigenvalues",
+      "passed": true
+    },
+    {
+      "id": "C4",
+      "name": "test_c4_isotropy_and_uniform_scale",
+      "passed": true
+    },
+    {
+      "id": "C5",
+      "name": "test_c5_invariants_and_immutability",
+      "passed": true
+    },
+    {
+      "id": "C6",
+      "name": "test_c6_autograd",
+      "passed": true
+    },
+    {
+      "id": "G1",
+      "name": "test_g1_center_not_pdf",
+      "passed": true
+    },
+    {
+      "id": "G2",
+      "name": "test_g2_axis_standard_deviations",
+      "passed": true
+    },
+    {
+      "id": "G3",
+      "name": "test_g3_translation",
+      "passed": true
+    },
+    {
+      "id": "G4",
+      "name": "test_g4_offdiagonal_covariance",
+      "passed": true
+    },
+    {
+      "id": "G5",
+      "name": "test_g5_symmetry_range_and_float32",
+      "passed": true
+    },
+    {
+      "id": "G6",
+      "name": "test_g6_composed_autograd",
+      "passed": true
+    }
+  ]
+}

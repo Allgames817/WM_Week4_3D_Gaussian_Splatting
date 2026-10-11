@@ -1,0 +1,185 @@
+{
+  "timestamp_utc": "2026-10-11T15:35:00.042069+00:00",
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "H:\\anaconda3\\envs\\wm_gsplat\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "gsplat": "1.5.3+pt24cu124",
+    "numpy": "1.26.4",
+    "Pillow": "10.4.0"
+  },
+  "exercise_sha256": "8cf633adb07744b6bed31cc16d3fead0ff38e32bbe7b7e735d09d5f0379d10fe",
+  "optimizer_steps": 0,
+  "source_hashes": {
+    "check_day4.py": "99d796fc5a8a52f827ccf28d5ed6070c273a4636a539db60a93b91eb338a72dd",
+    "compare_gsplat.py": "cc010ddb866d0b2d2f9a70fa3bfbdb16355fbeaae1bd40468e2692b92f1fa15a",
+    "compositing_packet.py": "a9ebbd65b2cff55d7c49ddbeff24aa46ea7f9d3d9824f06bf8dbcbd125dec3b9",
+    "day4_exercise.py": "8cf633adb07744b6bed31cc16d3fead0ff38e32bbe7b7e735d09d5f0379d10fe",
+    "fixtures_day4.py": "5e8f35323a97ae8d9c604c2881a0eeb7c86eb3b6ee0b8ff8d35ec628fffc8d92",
+    "run_day4.py": "72425c737ae49a5237b4a0e46c20cb4f75ceadc11d8bfd9d6e8b76a50f0eb741",
+    "runtime_support.py": "8c619bce4f3c7245a13fc650dbb2e4babaab97bd5a20fb55b263abee7769e552"
+  },
+  "day": "WM-W04-DAY4",
+  "status": "COMPLETED",
+  "mode": "screen_space_teaching",
+  "width": 96,
+  "height": 64,
+  "expected_cases": 10,
+  "completed_cases": 10,
+  "cases": [
+    {
+      "name": "01_baseline",
+      "question": "记录重叠位置的 alpha、T、weight 与 RGB。",
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "max_mass_error": 2.220446049250313e-16,
+      "mean_total_alpha": 0.13189701383948074,
+      "mean_residual": 0.8681029861605193,
+      "npz": "01_baseline/input_and_composite.npz",
+      "trace": "01_baseline/pixel_trace.csv"
+    },
+    {
+      "name": "02_swap_depth_labels",
+      "question": "只交换前两个深度标签：RGB 与总 alpha 是否都改变？",
+      "order": [
+        1,
+        0,
+        2
+      ],
+      "max_mass_error": 2.220446049250313e-16,
+      "mean_total_alpha": 0.13189701383948074,
+      "mean_residual": 0.8681029861605193,
+      "npz": "02_swap_depth_labels/input_and_composite.npz",
+      "trace": "02_swap_depth_labels/pixel_trace.csv"
+    },
+    {
+      "name": "03_front_low_opacity",
+      "question": "前景 opacity 降低后，后景权重怎样改变？",
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "max_mass_error": 2.220446049250313e-16,
+      "mean_total_alpha": 0.09669287780843171,
+      "mean_residual": 0.9033071221915684,
+      "npz": "03_front_low_opacity/input_and_composite.npz",
+      "trace": "03_front_low_opacity/pixel_trace.csv"
+    },
+    {
+      "name": "04_front_high_opacity",
+      "question": "前景变强是否意味着整个画面都不透光？",
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "max_mass_error": 2.220446049250313e-16,
+      "mean_total_alpha": 0.14539193265138292,
+      "mean_residual": 0.8546080673486172,
+      "npz": "04_front_high_opacity/input_and_composite.npz",
+      "trace": "04_front_high_opacity/pixel_trace.csv"
+    },
+    {
+      "name": "05_front_transparent",
+      "question": "前景基础 opacity 为零时，还会挡住后景吗？",
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "max_mass_error": 2.220446049250313e-16,
+      "mean_total_alpha": 0.08789184380066944,
+      "mean_residual": 0.9121081561993304,
+      "npz": "05_front_transparent/input_and_composite.npz",
+      "trace": "05_front_transparent/pixel_trace.csv"
+    },
+    {
+      "name": "06_front_wider",
+      "question": "前景协方差乘4，中心alpha与受影响范围分别怎样变化？",
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "max_mass_error": 2.220446049250313e-16,
+      "mean_total_alpha": 0.290996357185167,
+      "mean_residual": 0.7090036428148331,
+      "npz": "06_front_wider/input_and_composite.npz",
+      "trace": "06_front_wider/pixel_trace.csv"
+    },
+    {
+      "name": "07_white_background",
+      "question": "对比基线：白背景改变量是否等于剩余透射率？",
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "max_mass_error": 2.220446049250313e-16,
+      "mean_total_alpha": 0.13189701383948074,
+      "mean_residual": 0.8681029861605193,
+      "npz": "07_white_background/input_and_composite.npz",
+      "trace": "07_white_background/pixel_trace.csv"
+    },
+    {
+      "name": "08_front_color_only",
+      "question": "只换前景颜色，哪些 alpha/T/weight 应保持不变？",
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "max_mass_error": 2.220446049250313e-16,
+      "mean_total_alpha": 0.13189701383948074,
+      "mean_residual": 0.8681029861605193,
+      "npz": "08_front_color_only/input_and_composite.npz",
+      "trace": "08_front_color_only/pixel_trace.csv"
+    },
+    {
+      "name": "09_less_overlap",
+      "question": "后景二维中心右移，重叠程度与遮挡影响怎样变化？",
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "max_mass_error": 2.220446049250313e-16,
+      "mean_total_alpha": 0.15114268196459568,
+      "mean_residual": 0.8488573180354044,
+      "npz": "09_less_overlap/input_and_composite.npz",
+      "trace": "09_less_overlap/pixel_trace.csv"
+    },
+    {
+      "name": "10_background_only",
+      "question": "全部 opacity 为零，输出是否只剩背景？",
+      "order": [
+        0,
+        1,
+        2
+      ],
+      "max_mass_error": 0.0,
+      "mean_total_alpha": 0.0,
+      "mean_residual": 1.0,
+      "npz": "10_background_only/input_and_composite.npz",
+      "trace": "10_background_only/pixel_trace.csv"
+    }
+  ],
+  "sample_convention": "(column+0.5,row+0.5)",
+  "covariance_input": "full SPD pixel^2; consumed as-is, no additional eps2d",
+  "teaching_policy": "no cap, cutoff, early stop, or tile culling",
+  "depth_swap": "ordering labels only; fixed screen-space footprints",
+  "image_encoding": "fixed [0,1] -> uint8, no per-image normalization or gamma transform",
+  "local_pair_measurements": {
+    "swap_depth_max_rgb_change": 0.3601091546828331,
+    "swap_depth_max_total_alpha_change": 0.0,
+    "white_background_identity_max_error": 1.1102230246251565e-16,
+    "recolor_max_pixel_alpha_change": 0.0,
+    "recolor_max_weight_change": 0.0
+  }
+}

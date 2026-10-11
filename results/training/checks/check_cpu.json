@@ -1,0 +1,179 @@
+{
+  "day": "WM-W04-DAY5",
+  "timestamp_utc": "2026-10-11T16:27:00.123446+00:00",
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "H:\\anaconda3\\envs\\wm_gsplat\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "gsplat": "1.5.3+pt24cu124",
+    "numpy": "1.26.4",
+    "Pillow": "10.4.0"
+  },
+  "source_hashes": {
+    "check_day5.py": "b23e7bbfc72e362007934896c2476c96cdabd39c67647655334c04f30be4b856",
+    "dataset_support.py": "60a29bbd966c74f276df606f9a670a1f74dbef94b1545eb520b733a8d5749213",
+    "day5_exercise.py": "b5435ae5f806aa9e4d89c27868d06a94fd36428842a771357488ba0fef7614ea",
+    "evaluate_day5.py": "3b42b86ae5b07af9f556c3c447f2d26d27865ed67e2088150a158c181fd87c9e",
+    "fixtures_day5.py": "00d583638045a5211e7b372e3a158e5dcd2e8dfe2162981ed6c4f58a75712d9f",
+    "metrics_and_io.py": "73e30d63adb20ab3dbc7fc90399e8dd811a60ec738a3f25578c6f9512dfd908f",
+    "optimization_support.py": "6efb3bdb9ce56cec42fdde2b0c62fa912493492b1ea936018ade1d0f68b53f9a",
+    "prepare_scene.py": "d572163a809159a505ded1d47880cc65bc955f83f7a9fa11c99d765b0d742593",
+    "renderer_bridge.py": "9945736fec487d11beb746f25fd82cebf3183a82788935145cac52277722837c",
+    "runtime_support.py": "a8e2357a83503219eb7ddbc6294a929e70f9976948a9fa4e5735305da5142dc9",
+    "train_day5.py": "21e7cdd60818e01cf0b3e7b13697ec46159c40fb2dcc1a22db75b79411012049"
+  },
+  "mode": "cpu",
+  "expected_checks": 24,
+  "executed": 24,
+  "passed": 24,
+  "status": "PASSED",
+  "checks": [
+    {
+      "id": "P1",
+      "name": "p1_leaf_parameters",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "P2",
+      "name": "p2_frozen_groups",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "P3",
+      "name": "p3_independent_storage",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "P4",
+      "name": "p4_raw_values_not_activated",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "P5",
+      "name": "p5_shapes_and_parameter_count",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "P6",
+      "name": "p6_invalid_selection",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "P7",
+      "name": "p7_initial_graph_is_not_training_graph",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "P8",
+      "name": "p8_optimizer_owns_the_same_parameters",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "L1",
+      "name": "l1_zero_loss",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "L2",
+      "name": "l2_all_scalar_denominator",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "L3",
+      "name": "l3_constant_residual",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "L4",
+      "name": "l4_prediction_gradient",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "L5",
+      "name": "l5_no_broadcasting",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "L6",
+      "name": "l6_rgb_shape_and_empty_validation",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "L7",
+      "name": "l7_dtype_validation",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "L8",
+      "name": "l8_float32_and_no_clipping",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "S1",
+      "name": "s1_one_sgd_step",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "S2",
+      "name": "s2_old_gradients_are_cleared",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "S3",
+      "name": "s3_frozen_parameters_unchanged",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "S4",
+      "name": "s4_fresh_forward_and_one_step",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "S5",
+      "name": "s5_multiple_groups_and_identity",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "S6",
+      "name": "s6_zero_gradient_is_valid",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "S7",
+      "name": "s7_report_norms_and_scalar_types",
+      "status": "PASSED",
+      "measurements": null
+    },
+    {
+      "id": "S8",
+      "name": "s8_invalid_loss_or_grad_stops_before_step",
+      "status": "PASSED",
+      "measurements": null
+    }
+  ],
+  "gaussian_fitting_run": false
+}

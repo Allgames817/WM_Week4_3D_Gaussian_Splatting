@@ -1,0 +1,246 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<title>WM-W04 Day2 | Local world-space slices</title>
+<style>body{font-family:system-ui,sans-serif;max-width:1200px;margin:32px auto;padding:0 20px;line-height:1.6}
+table{border-collapse:collapse;width:100%}td,th{border:1px solid;padding:12px;vertical-align:top}
+pre{white-space:pre-wrap;font-size:12px}img{image-rendering:pixelated;max-width:100%;height:auto}</style>
+<h1>Day2：你本地生成的世界空间切片</h1>
+<p><strong>这些图不是相机渲染、不是投影，也不是像素 alpha。</strong>
+灰度固定对应未归一化的三维形状响应 G(x)，全部使用 [0,1]，没有逐图自动拉伸。</p>
+<p>XY：固定 z=2.5，x 从左到右为 -0.8 到 0.8，y 从上到下为 0.8 到 -0.8。
+XZ：固定 y=0，x 同上，z 从上到下为 3.3 到 1.7。单位是合成场景单位，不预设为米。</p>
+<p>opacity_only / color_only 是几何不变的对照：本脚本有意不把 opacity 或 RGB 乘进形状响应。
+它们在真实渲染中的作用不由本页验证。isotropic_rotate 应与 isotropic 成对比较。</p>
+<p>浮点数组、协方差和坐标保存在各目录的 fields.npz。PNG 仅供查看。
+实际运行状态、输入与定量差异见 experiment_report.json、shape_stats.csv。</p>
+<table><thead><tr><th>单个高斯的输入</th><th>固定世界 XY 切片</th><th>固定世界 XZ 切片</th></tr></thead><tbody>
+<tr><td><strong>baseline</strong><p>Reference INPUT, not a reference output.</p><pre>{
+  &quot;mean&quot;: [
+    0.0,
+    0.0,
+    2.5
+  ],
+  &quot;quat&quot;: [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  &quot;scales&quot;: [
+    0.18,
+    0.07,
+    0.11
+  ],
+  &quot;opacity&quot;: 0.7,
+  &quot;color&quot;: [
+    0.8,
+    0.25,
+    0.1
+  ]
+}</pre></td><td><img width="322" height="322" src="baseline/slice_xy.png" alt="baseline world XY slice"></td><td><img width="322" height="322" src="baseline/slice_xz.png" alt="baseline world XZ slice"></td></tr><tr><td><strong>mean_x_plus</strong><p>Only world mean x changes.</p><pre>{
+  &quot;mean&quot;: [
+    0.25,
+    0.0,
+    2.5
+  ],
+  &quot;quat&quot;: [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  &quot;scales&quot;: [
+    0.18,
+    0.07,
+    0.11
+  ],
+  &quot;opacity&quot;: 0.7,
+  &quot;color&quot;: [
+    0.8,
+    0.25,
+    0.1
+  ]
+}</pre></td><td><img width="322" height="322" src="mean_x_plus/slice_xy.png" alt="mean_x_plus world XY slice"></td><td><img width="322" height="322" src="mean_x_plus/slice_xz.png" alt="mean_x_plus world XZ slice"></td></tr><tr><td><strong>scale_x_double</strong><p>Only local axis sx doubles.</p><pre>{
+  &quot;mean&quot;: [
+    0.0,
+    0.0,
+    2.5
+  ],
+  &quot;quat&quot;: [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  &quot;scales&quot;: [
+    0.36,
+    0.07,
+    0.11
+  ],
+  &quot;opacity&quot;: 0.7,
+  &quot;color&quot;: [
+    0.8,
+    0.25,
+    0.1
+  ]
+}</pre></td><td><img width="322" height="322" src="scale_x_double/slice_xy.png" alt="scale_x_double world XY slice"></td><td><img width="322" height="322" src="scale_x_double/slice_xz.png" alt="scale_x_double world XZ slice"></td></tr><tr><td><strong>scale_all_double</strong><p>All three local scales double.</p><pre>{
+  &quot;mean&quot;: [
+    0.0,
+    0.0,
+    2.5
+  ],
+  &quot;quat&quot;: [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  &quot;scales&quot;: [
+    0.36,
+    0.14,
+    0.22
+  ],
+  &quot;opacity&quot;: 0.7,
+  &quot;color&quot;: [
+    0.8,
+    0.25,
+    0.1
+  ]
+}</pre></td><td><img width="322" height="322" src="scale_all_double/slice_xy.png" alt="scale_all_double world XY slice"></td><td><img width="322" height="322" src="scale_all_double/slice_xz.png" alt="scale_all_double world XZ slice"></td></tr><tr><td><strong>rotate_z_45</strong><p>Only local-to-world orientation changes.</p><pre>{
+  &quot;mean&quot;: [
+    0.0,
+    0.0,
+    2.5
+  ],
+  &quot;quat&quot;: [
+    0.9238795325112867,
+    0.0,
+    0.0,
+    0.3826834323650898
+  ],
+  &quot;scales&quot;: [
+    0.18,
+    0.07,
+    0.11
+  ],
+  &quot;opacity&quot;: 0.7,
+  &quot;color&quot;: [
+    0.8,
+    0.25,
+    0.1
+  ]
+}</pre></td><td><img width="322" height="322" src="rotate_z_45/slice_xy.png" alt="rotate_z_45 world XY slice"></td><td><img width="322" height="322" src="rotate_z_45/slice_xz.png" alt="rotate_z_45 world XZ slice"></td></tr><tr><td><strong>rotate_y_45</strong><p>A second plane helps inspect this rotation.</p><pre>{
+  &quot;mean&quot;: [
+    0.0,
+    0.0,
+    2.5
+  ],
+  &quot;quat&quot;: [
+    0.9238795325112867,
+    0.0,
+    0.3826834323650898,
+    0.0
+  ],
+  &quot;scales&quot;: [
+    0.18,
+    0.07,
+    0.11
+  ],
+  &quot;opacity&quot;: 0.7,
+  &quot;color&quot;: [
+    0.8,
+    0.25,
+    0.1
+  ]
+}</pre></td><td><img width="322" height="322" src="rotate_y_45/slice_xy.png" alt="rotate_y_45 world XY slice"></td><td><img width="322" height="322" src="rotate_y_45/slice_xz.png" alt="rotate_y_45 world XZ slice"></td></tr><tr><td><strong>isotropic</strong><p>Separate spherical input for a paired control.</p><pre>{
+  &quot;mean&quot;: [
+    0.0,
+    0.0,
+    2.5
+  ],
+  &quot;quat&quot;: [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  &quot;scales&quot;: [
+    0.12,
+    0.12,
+    0.12
+  ],
+  &quot;opacity&quot;: 0.7,
+  &quot;color&quot;: [
+    0.8,
+    0.25,
+    0.1
+  ]
+}</pre></td><td><img width="322" height="322" src="isotropic/slice_xy.png" alt="isotropic world XY slice"></td><td><img width="322" height="322" src="isotropic/slice_xz.png" alt="isotropic world XZ slice"></td></tr><tr><td><strong>isotropic_rotate</strong><p>Compare with isotropic, not baseline.</p><pre>{
+  &quot;mean&quot;: [
+    0.0,
+    0.0,
+    2.5
+  ],
+  &quot;quat&quot;: [
+    0.9238795325112867,
+    0.0,
+    0.0,
+    0.3826834323650898
+  ],
+  &quot;scales&quot;: [
+    0.12,
+    0.12,
+    0.12
+  ],
+  &quot;opacity&quot;: 0.7,
+  &quot;color&quot;: [
+    0.8,
+    0.25,
+    0.1
+  ]
+}</pre></td><td><img width="322" height="322" src="isotropic_rotate/slice_xy.png" alt="isotropic_rotate world XY slice"></td><td><img width="322" height="322" src="isotropic_rotate/slice_xz.png" alt="isotropic_rotate world XZ slice"></td></tr><tr><td><strong>opacity_only</strong><p>Geometry-only response deliberately excludes opacity.</p><pre>{
+  &quot;mean&quot;: [
+    0.0,
+    0.0,
+    2.5
+  ],
+  &quot;quat&quot;: [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  &quot;scales&quot;: [
+    0.18,
+    0.07,
+    0.11
+  ],
+  &quot;opacity&quot;: 0.25,
+  &quot;color&quot;: [
+    0.8,
+    0.25,
+    0.1
+  ]
+}</pre></td><td><img width="322" height="322" src="opacity_only/slice_xy.png" alt="opacity_only world XY slice"></td><td><img width="322" height="322" src="opacity_only/slice_xz.png" alt="opacity_only world XZ slice"></td></tr><tr><td><strong>color_only</strong><p>Geometry-only response deliberately excludes RGB.</p><pre>{
+  &quot;mean&quot;: [
+    0.0,
+    0.0,
+    2.5
+  ],
+  &quot;quat&quot;: [
+    1.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  &quot;scales&quot;: [
+    0.18,
+    0.07,
+    0.11
+  ],
+  &quot;opacity&quot;: 0.7,
+  &quot;color&quot;: [
+    0.1,
+    0.3,
+    0.85
+  ]
+}</pre></td><td><img width="322" height="322" src="color_only/slice_xy.png" alt="color_only world XY slice"></td><td><img width="322" height="322" src="color_only/slice_xz.png" alt="color_only world XZ slice"></td></tr></tbody></table></html>

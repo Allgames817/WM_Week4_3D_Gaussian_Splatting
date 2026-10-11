@@ -1,0 +1,20 @@
+{
+  "excluded_categories": [
+    {
+      "category": "Full training and exercise source, environment installers and templates",
+      "reason": "Results showcase matching the preceding repository; source identities are recorded in the manifest."
+    },
+    {
+      "category": "Torch checkpoints and Python caches",
+      "reason": "Not needed for archived metric recomputation; no model-loading dependency."
+    },
+    {
+      "category": "Earlier failed checks, duplicate edit audit and pre-style-update projection exports",
+      "reason": "Use current checked reports, corrected-path edit audit and current SVG exports; preserve version history in SOURCE_INDEX.md."
+    },
+    {
+      "category": "Smoke runs and environment-only IO probes",
+      "reason": "Superseded by complete paired experiments and explicit historical checks."
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "day": "WM-W04-DAY5",
+  "timestamp_utc": "2026-10-11T16:30:49.414268+00:00",
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "H:\\anaconda3\\envs\\wm_gsplat\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "gsplat": "1.5.3+pt24cu124",
+    "numpy": "1.26.4",
+    "Pillow": "10.4.0"
+  },
+  "source_hashes": {
+    "check_day5.py": "b23e7bbfc72e362007934896c2476c96cdabd39c67647655334c04f30be4b856",
+    "dataset_support.py": "60a29bbd966c74f276df606f9a670a1f74dbef94b1545eb520b733a8d5749213",
+    "day5_exercise.py": "b5435ae5f806aa9e4d89c27868d06a94fd36428842a771357488ba0fef7614ea",
+    "evaluate_day5.py": "3b42b86ae5b07af9f556c3c447f2d26d27865ed67e2088150a158c181fd87c9e",
+    "fixtures_day5.py": "00d583638045a5211e7b372e3a158e5dcd2e8dfe2162981ed6c4f58a75712d9f",
+    "metrics_and_io.py": "73e30d63adb20ab3dbc7fc90399e8dd811a60ec738a3f25578c6f9512dfd908f",
+    "optimization_support.py": "6efb3bdb9ce56cec42fdde2b0c62fa912493492b1ea936018ade1d0f68b53f9a",
+    "prepare_scene.py": "d572163a809159a505ded1d47880cc65bc955f83f7a9fa11c99d765b0d742593",
+    "renderer_bridge.py": "9945736fec487d11beb746f25fd82cebf3183a82788935145cac52277722837c",
+    "runtime_support.py": "a8e2357a83503219eb7ddbc6294a929e70f9976948a9fa4e5735305da5142dc9",
+    "train_day5.py": "21e7cdd60818e01cf0b3e7b13697ec46159c40fb2dcc1a22db75b79411012049"
+  },
+  "status": "GENERATED",
+  "native": {
+    "version": "1.5.3+pt24cu124",
+    "native_extension": "H:\\anaconda3\\envs\\wm_gsplat\\lib\\site-packages\\gsplat\\csrc.pyd",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "torch_cuda": "12.4"
+  },
+  "kind": "WM-W04-DAY5-SYNTHETIC-INPUT",
+  "scene_sha256": "51d579640f0ecc5b28906eff9f0f716b90042eda0539d4e0fdc22fce04185af5",
+  "gaussian_count": 12,
+  "seed": 42,
+  "train_ids": [
+    0,
+    2,
+    3,
+    4,
+    6
+  ],
+  "val_ids": [
+    1,
+    5
+  ],
+  "width": 96,
+  "height": 64,
+  "optimizer_steps": 0,
+  "initialization": "known generating scene + fixed seeded perturbation",
+  "supervision": "RGB only; teacher parameters excluded from scene.npz",
+  "limitation": "same-renderer synthetic self-consistency, not real reconstruction"
+}

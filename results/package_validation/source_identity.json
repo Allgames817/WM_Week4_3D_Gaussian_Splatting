@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-12",
+  "scope": "Read-only source and artifact identity checks; no training, CPU exercise tests, CUDA tests or new rendering.",
+  "historical_checks": [
+    {
+      "report": "results/renderer_entry/checks/check_cpu.json",
+      "recorded_passed": 8,
+      "source_hashes_checked": 1,
+      "mismatches": []
+    },
+    {
+      "report": "results/renderer_entry/checks/check_cuda.json",
+      "recorded_passed": 12,
+      "source_hashes_checked": 1,
+      "mismatches": []
+    },
+    {
+      "report": "results/renderer_entry/checks/env_report.json",
+      "recorded_passed": 4,
+      "source_hashes_checked": 1,
+      "mismatches": []
+    },
+    {
+      "report": "results/gaussian_parameters/checks/check_cpu.json",
+      "recorded_passed": 18,
+      "source_hashes_checked": 1,
+      "mismatches": []
+    },
+    {
+      "report": "results/gaussian_parameters/checks/compare_gsplat.json",
+      "recorded_passed": 3,
+      "source_hashes_checked": 1,
+      "mismatches": []
+    },
+    {
+      "report": "results/projection/checks/check_cpu.json",
+      "recorded_passed": 24,
+      "source_hashes_checked": 7,
+      "mismatches": []
+    },
+    {
+      "report": "results/projection/checks/compare_gsplat.json",
+      "recorded_passed": 3,
+      "source_hashes_checked": 7,
+      "mismatches": []
+    },
+    {
+      "report": "results/compositing/checks/check_cpu.json",
+      "recorded_passed": 24,
+      "source_hashes_checked": 7,
+      "mismatches": []
+    },
+    {
+      "report": "results/compositing/checks/compare_gsplat.json",
+      "recorded_passed": 4,
+      "source_hashes_checked": 7,
+      "mismatches": []
+    },
+    {
+      "report": "results/training/checks/check_cpu.json",
+      "recorded_passed": 24,
+      "source_hashes_checked": 11,
+      "mismatches": []
+    },
+    {
+      "report": "results/training/checks/check_cuda.json",
+      "recorded_passed": 4,
+      "source_hashes_checked": 11,
+      "mismatches": []
+    },
+    {
+      "report": "results/density_control/checks/check_cpu.json",
+      "recorded_passed": 24,
+      "source_hashes_checked": 15,
+      "mismatches": []
+    },
+    {
+      "report": "results/density_control/checks/check_cuda.json",
+      "recorded_passed": 4,
+      "source_hashes_checked": 15,
+      "mismatches": []
+    },
+    {
+      "report": "results/validation/checks/check_cpu.json",
+      "recorded_passed": 24,
+      "source_hashes_checked": 8,
+      "mismatches": []
+    }
+  ],
+  "audit_input_files_checked": 66,
+  "audit_input_mismatches": [],
+  "frozen_artifacts": [
+    {
+      "model": "fixed",
+      "registered_artifacts_checked": 3,
+      "mismatches": [],
+      "audit_hash_matches": true,
+      "frames": 61
+    },
+    {
+      "model": "adaptive",
+      "registered_artifacts_checked": 3,
+      "mismatches": [],
+      "audit_hash_matches": true,
+      "frames": 61
+    }
+  ],
+  "status": "PASS"
+}

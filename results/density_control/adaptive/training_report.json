@@ -1,0 +1,194 @@
+{
+  "day": "WM-W04-DAY6",
+  "timestamp_utc": "2026-10-11T17:55:39.026671+00:00",
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "H:\\anaconda3\\envs\\wm_gsplat\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "gsplat": "1.5.3+pt24cu124",
+    "numpy": "1.26.4",
+    "Pillow": "10.4.0"
+  },
+  "source_hashes": {
+    "audit_edits.py": "e33f4858f25ceb113502c227cf87d73a498fa6299c39b72b42c8b3cd87e00110",
+    "check_day6.py": "3eb7109be8b0401b3417070d33762bbc18d3292d6ecff8b2bedc137c6bb88cf1",
+    "compare_runs.py": "1cb67ad6dc6e52f73d9fa9254a13829b55f66dfe397a8fe47b9ee9a50a898ae9",
+    "contracts.py": "1d25d4bdd3347e38d74acfddc0ff7b45154e8b6c84ef97f9c2444ad56cee6bbd",
+    "dataset_support.py": "77a9d20df14faac9f178c796cb0407daf09bfaa229a5dc6b8bb0cab78a53aa30",
+    "day5_bridge.py": "98ed002ad0abf96e1332b52cfba6b635ed2f4f7c35239cb6e6526bf9153837e0",
+    "day6_exercise.py": "2335ad7e5763c0fe69034121be4a1a8aac6f5a0b1d68b44b51846535a1e2bda1",
+    "evaluate_day6.py": "9d45873582ebc3086b544527239d65b661235946636230317566eff60a57e481",
+    "experiment_support.py": "9e1d175fe2c0d9e119c69d791b7920bdd8817cc63a4e2ea0138039d44a62e86f",
+    "fixtures_day6.py": "10aa7453408088ea0e834757b806c89039e6e7cfd6bebd2e19a2ec7165d85050",
+    "metrics_and_io.py": "73e30d63adb20ab3dbc7fc90399e8dd811a60ec738a3f25578c6f9512dfd908f",
+    "refinement_support.py": "1eb10bdf28160ca8fc265d4abb4a851a347f7bc49b7cac38a85a5ebfa6395c90",
+    "renderer_bridge.py": "22e0955dbd27135816b8272d69b8f890ad4d45eabf8ef8bfd2974c2c4d0deaa2",
+    "runtime_support.py": "57c6cef9b843b88fa616e6cb2fbf819e1ee29210907ffabd4a1d00e041d7f963",
+    "train_day6.py": "dea148f7667f61b02b9d565895acf43ba6b6e349616dbac551d6bdb01877cff7"
+  },
+  "status": "COMPLETED",
+  "completed_local_updates": 300,
+  "native": {
+    "version": "1.5.3+pt24cu124",
+    "native_extension": "H:\\anaconda3\\envs\\wm_gsplat\\lib\\site-packages\\gsplat\\csrc.pyd",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "torch_cuda": "12.4"
+  },
+  "config": {
+    "mode": "adaptive",
+    "local_steps": 300,
+    "seed": 42,
+    "policy": {
+      "grow_threshold": 0.0002,
+      "small_scale": 0.12,
+      "prune_threshold": 0.005,
+      "max_points": 32,
+      "max_new": 2,
+      "max_prune": 2,
+      "min_points": 4
+    },
+    "refine_after_local_updates": [
+      50,
+      100,
+      150,
+      200,
+      250
+    ],
+    "loss": "all-scalar RGB MSE",
+    "optimizer": "restored Day5 Adam; survivor history retained; new-row moments zero",
+    "split": "deterministic symmetric longest-axis offsets; scale divided by 1.6",
+    "opacity_reset": false,
+    "cameras_fixed": true,
+    "sh_degree": null,
+    "train_ids": [
+      0,
+      2,
+      3,
+      4,
+      6
+    ],
+    "val_ids": [
+      1,
+      5
+    ],
+    "evaluation_selection": "last checkpoint, no validation-selected best",
+    "gradient_collection": "pre-update training render; edit after optimizer step",
+    "view_schedule": "round-robin continued from Day5 completed_updates"
+  },
+  "origin": {
+    "day5_checkpoint_sha256": "bd56a486149bcb4a70306ac23005aac416d00d7980bdc663ebef6d6789e094c5",
+    "day5_source_hashes": {
+      "check_day5.py": "b23e7bbfc72e362007934896c2476c96cdabd39c67647655334c04f30be4b856",
+      "dataset_support.py": "60a29bbd966c74f276df606f9a670a1f74dbef94b1545eb520b733a8d5749213",
+      "day5_exercise.py": "b5435ae5f806aa9e4d89c27868d06a94fd36428842a771357488ba0fef7614ea",
+      "evaluate_day5.py": "3b42b86ae5b07af9f556c3c447f2d26d27865ed67e2088150a158c181fd87c9e",
+      "fixtures_day5.py": "00d583638045a5211e7b372e3a158e5dcd2e8dfe2162981ed6c4f58a75712d9f",
+      "metrics_and_io.py": "73e30d63adb20ab3dbc7fc90399e8dd811a60ec738a3f25578c6f9512dfd908f",
+      "optimization_support.py": "6efb3bdb9ce56cec42fdde2b0c62fa912493492b1ea936018ade1d0f68b53f9a",
+      "prepare_scene.py": "d572163a809159a505ded1d47880cc65bc955f83f7a9fa11c99d765b0d742593",
+      "renderer_bridge.py": "9945736fec487d11beb746f25fd82cebf3183a82788935145cac52277722837c",
+      "runtime_support.py": "a8e2357a83503219eb7ddbc6294a929e70f9976948a9fa4e5735305da5142dc9",
+      "train_day5.py": "21e7cdd60818e01cf0b3e7b13697ec46159c40fb2dcc1a22db75b79411012049"
+    },
+    "dataset_sha256": "51d579640f0ecc5b28906eff9f0f716b90042eda0539d4e0fdc22fce04185af5",
+    "day5_completed_updates": 600
+  },
+  "start_rgb_max_abs_difference": 0.0,
+  "initial_metrics": {
+    "train": {
+      "sse": 0.40344353969678215,
+      "scalar_count": 92160,
+      "mse": 4.377642574834875e-06,
+      "psnr_db": 53.5875970053733,
+      "psnr_is_infinite": false,
+      "max_abs_error": 0.04706721007823944,
+      "contrast_mask_pixel_count": 12176,
+      "contrast_mask_mse": 1.095720074323054e-05,
+      "view_ids": [
+        0,
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    "val": {
+      "sse": 0.1612743601020425,
+      "scalar_count": 36864,
+      "mse": 4.374847007976413e-06,
+      "psnr_db": 53.590371300138735,
+      "psnr_is_infinite": false,
+      "max_abs_error": 0.04638424515724182,
+      "contrast_mask_pixel_count": 4869,
+      "contrast_mask_mse": 1.0944281001724375e-05,
+      "view_ids": [
+        1,
+        5
+      ]
+    }
+  },
+  "final_metrics": {
+    "train": {
+      "sse": 0.16552550275093347,
+      "scalar_count": 92160,
+      "mse": 1.7960666531134273e-06,
+      "psnr_db": 57.456775504402984,
+      "psnr_is_infinite": false,
+      "max_abs_error": 0.017753079533576965,
+      "contrast_mask_pixel_count": 12176,
+      "contrast_mask_mse": 4.3727420369473675e-06,
+      "view_ids": [
+        0,
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    "val": {
+      "sse": 0.06559898964314874,
+      "scalar_count": 36864,
+      "mse": 1.7794864812052067e-06,
+      "psnr_db": 57.497053069915665,
+      "psnr_is_infinite": false,
+      "max_abs_error": 0.017624571919441223,
+      "contrast_mask_pixel_count": 4869,
+      "contrast_mask_mse": 4.338927012366602e-06,
+      "view_ids": [
+        1,
+        5
+      ]
+    }
+  },
+  "gaussian_count_initial": 12,
+  "gaussian_count_final": 14,
+  "gaussian_count_max": 14,
+  "events_with_edits": 1,
+  "refinement_windows": 5,
+  "total_actions": {
+    "clone": 0,
+    "split": 2,
+    "prune": 0
+  },
+  "used_training_camera_counts": {
+    "0": 60,
+    "2": 60,
+    "3": 60,
+    "4": 60,
+    "6": 60
+  },
+  "validation_optimizer_uses": 0,
+  "validation_selector_uses": 0,
+  "loop_including_refinement_logging_and_evaluation_seconds": 3.2721487000017078,
+  "synchronized_update_call_seconds": 1.8601157000739477,
+  "peak_torch_cuda_allocated_bytes": 4512256,
+  "peak_torch_cuda_reserved_bytes": 6291456,
+  "resource_scope": "CUDA peaks after initial eval; includes loop eval. Not total GPU/host memory.",
+  "raw_parameter_bytes": 784,
+  "checkpoint_file_bytes": 12962,
+  "checkpoint_sha256": "98e988e288ef23deaeece24263091c8812d48d84ec1432ba15ea7c2933a3431d",
+  "independent_reload_evaluated": false,
+  "quality_note": "COMPLETED is execution status, not proof of improvement or densification benefit."
+}

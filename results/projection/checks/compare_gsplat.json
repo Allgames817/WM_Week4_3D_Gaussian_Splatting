@@ -1,0 +1,64 @@
+{
+  "timestamp_utc": "2026-10-11T13:59:07.053017+00:00",
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "H:\\anaconda3\\envs\\wm_gsplat\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "gsplat": "1.5.3+pt24cu124",
+    "numpy": "1.26.4",
+    "Pillow": "10.4.0"
+  },
+  "exercise_sha256": "01f94e0867c0b85caf1896168a9a81bcfea814c88f04a70beeb23adbcbe26be1",
+  "optimizer_steps": 0,
+  "source_hashes": {
+    "check_day3.py": "3544a46a1914e60e3312b8310736a82ed327d2bc65cef5c970b18a1e14072509",
+    "compare_gsplat.py": "dfa9a21f184c4764976d670c20a0fe7d9b69d86d61ac00d5e13392c7ed2101b2",
+    "day3_exercise.py": "01f94e0867c0b85caf1896168a9a81bcfea814c88f04a70beeb23adbcbe26be1",
+    "fixtures_day3.py": "041e6d0e151f6d42244f30092570ff3001fe8ba9bde6b59d4d77263bb8a6cc84",
+    "projection_packet.py": "994bf09c148d41661d5f06168a4f585b9354e350a6c8271697095e7e965a8b28",
+    "run_day3.py": "03363797968301f2be771e9ef40956fbc771eeef9068ff13d520cd552ab77772",
+    "runtime_support.py": "ba381fa24d9329e9d43cf2fa292588162c41a3b18d35bbbfb317943d4a726e5a"
+  },
+  "day": "WM-W04-DAY3",
+  "status": "PASSED",
+  "expected_checks": 3,
+  "executed": 3,
+  "passed": 3,
+  "checks": [
+    {
+      "id": "S1",
+      "passed": true,
+      "metrics": {
+        "mean_max_abs": 0.0,
+        "covar_max_abs": 0.0
+      }
+    },
+    {
+      "id": "S2",
+      "passed": true,
+      "metrics": {
+        "center_max_abs": 0.0,
+        "raw_covariance_max_abs": 1.4901161193847656e-08
+      }
+    },
+    {
+      "id": "S3",
+      "passed": true,
+      "metrics": {
+        "means_gradient_max_abs": 1.1920928955078125e-07,
+        "covariance_factor_gradient_max_abs": 1.1920928955078125e-07
+      }
+    }
+  ],
+  "mode": "optional_gsplat_cuda",
+  "fov_clamp_domain": "inactive_in_all_comparison_inputs",
+  "eps2d": 0.0,
+  "rasterization_used": false,
+  "native": {
+    "version": "1.5.3+pt24cu124",
+    "native_extension": "H:\\anaconda3\\envs\\wm_gsplat\\lib\\site-packages\\gsplat\\csrc.pyd"
+  },
+  "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU"
+}

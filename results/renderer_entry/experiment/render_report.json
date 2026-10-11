@@ -1,0 +1,44 @@
+{
+  "timestamp_utc": "2026-10-10T17:23:19.339110+00:00",
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "H:\\anaconda3\\envs\\wm_gsplat\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "numpy": "1.26.4",
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "gsplat": "1.5.3+pt24cu124",
+    "Pillow": "10.4.0",
+    "ninja": "1.11.1.4",
+    "jaxtyping": "0.2.36",
+    "rich": "13.9.4",
+    "typing_extensions": "4.12.2"
+  },
+  "exercise_sha256": "6fa5905cd7bdb90b5e4020cbbef4e834a67b52eae33769f19cc014d2cba29951",
+  "status": "RENDERED",
+  "source": "hand-authored synthetic Gaussians",
+  "width": 96,
+  "height": 64,
+  "num_gaussians": 3,
+  "optimizer_steps": 0,
+  "native": {
+    "distribution_version": "1.5.3+pt24cu124",
+    "native_extension": "H:\\anaconda3\\envs\\wm_gsplat\\Lib\\site-packages\\gsplat\\csrc.pyd"
+  },
+  "rgb_shape": [
+    1,
+    64,
+    96,
+    3
+  ],
+  "alpha_shape": [
+    1,
+    64,
+    96,
+    1
+  ],
+  "rgb_min": 0.0,
+  "rgb_max": 0.49803102016448975,
+  "alpha_max": 0.6239564418792725,
+  "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU"
+}

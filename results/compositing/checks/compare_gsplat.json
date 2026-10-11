@@ -1,0 +1,79 @@
+{
+  "timestamp_utc": "2026-10-11T15:35:25.509047+00:00",
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "H:\\anaconda3\\envs\\wm_gsplat\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "gsplat": "1.5.3+pt24cu124",
+    "numpy": "1.26.4",
+    "Pillow": "10.4.0"
+  },
+  "exercise_sha256": "8cf633adb07744b6bed31cc16d3fead0ff38e32bbe7b7e735d09d5f0379d10fe",
+  "optimizer_steps": 0,
+  "source_hashes": {
+    "check_day4.py": "99d796fc5a8a52f827ccf28d5ed6070c273a4636a539db60a93b91eb338a72dd",
+    "compare_gsplat.py": "cc010ddb866d0b2d2f9a70fa3bfbdb16355fbeaae1bd40468e2692b92f1fa15a",
+    "compositing_packet.py": "a9ebbd65b2cff55d7c49ddbeff24aa46ea7f9d3d9824f06bf8dbcbd125dec3b9",
+    "day4_exercise.py": "8cf633adb07744b6bed31cc16d3fead0ff38e32bbe7b7e735d09d5f0379d10fe",
+    "fixtures_day4.py": "5e8f35323a97ae8d9c604c2881a0eeb7c86eb3b6ee0b8ff8d35ec628fffc8d92",
+    "run_day4.py": "72425c737ae49a5237b4a0e46c20cb4f75ceadc11d8bfd9d6e8b76a50f0eb741",
+    "runtime_support.py": "8c619bce4f3c7245a13fc650dbb2e4babaab97bd5a20fb55b263abee7769e552"
+  },
+  "day": "WM-W04-DAY4",
+  "mode": "optional_gsplat_cuda",
+  "status": "PASSED",
+  "expected_checks": 4,
+  "executed": 4,
+  "passed": 4,
+  "checks": [
+    {
+      "id": "S1",
+      "name": "check_s1_forward_and_order",
+      "status": "PASSED",
+      "measurements": {
+        "rgb_max_abs": 5.960464477539063e-08,
+        "alpha_max_abs": 5.960464477539063e-08
+      }
+    },
+    {
+      "id": "S2",
+      "name": "check_s2_depth_and_background",
+      "status": "PASSED",
+      "measurements": {
+        "swapped_rgb_max_abs": 5.960464477539063e-08,
+        "background_identity_max_abs": 8.940696716308594e-08
+      }
+    },
+    {
+      "id": "S3",
+      "name": "check_s3_gradients",
+      "status": "PASSED",
+      "measurements": {
+        "means2d_gradient_max_abs": 9.313225746154785e-10,
+        "covariance_factor_gradient_max_abs": 1.3969838619232178e-09,
+        "opacity_gradient_max_abs": 1.1920928955078125e-07,
+        "rgb_gradient_max_abs": 5.960464477539063e-08,
+        "background_gradient_max_abs": 0.0
+      }
+    },
+    {
+      "id": "S4",
+      "name": "check_s4_high_level_3d_smoke",
+      "status": "PASSED",
+      "measurements": {
+        "background_identity_max_abs": 5.960464477539063e-08,
+        "means3d_gradient_max_abs": 23.911542892456055,
+        "opacity_gradient_max_abs": 44.18666076660156,
+        "rgb_gradient_max_abs": 24.949941635131836
+      }
+    }
+  ],
+  "comparison_domain": "S1-S3 single tile; alpha cap/cutoff/early-stop inactive; S4 smoke only",
+  "native": {
+    "version": "1.5.3+pt24cu124",
+    "native_extension": "H:\\anaconda3\\envs\\wm_gsplat\\Lib\\site-packages\\gsplat\\csrc.pyd"
+  },
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+}

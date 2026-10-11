@@ -1,0 +1,57 @@
+{
+  "timestamp_utc": "2026-10-10T17:22:42.654459+00:00",
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "H:\\anaconda3\\envs\\wm_gsplat\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "numpy": "1.26.4",
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "gsplat": "1.5.3+pt24cu124",
+    "Pillow": "10.4.0",
+    "ninja": "1.11.1.4",
+    "jaxtyping": "0.2.36",
+    "rich": "13.9.4",
+    "typing_extensions": "4.12.2"
+  },
+  "exercise_sha256": "6fa5905cd7bdb90b5e4020cbbef4e834a67b52eae33769f19cc014d2cba29951",
+  "mode": "cpu",
+  "checks": [
+    {
+      "name": "C01 parameter keys/shapes",
+      "status": "PASS"
+    },
+    {
+      "name": "C02 positive scale activation",
+      "status": "PASS"
+    },
+    {
+      "name": "C03 opacity activation",
+      "status": "PASS"
+    },
+    {
+      "name": "C04 means/quats/RGB unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "C05 parameter autograd",
+      "status": "PASS"
+    },
+    {
+      "name": "C06 camera batch and intrinsics",
+      "status": "PASS"
+    },
+    {
+      "name": "C07 nonidentity c2w-to-w2c",
+      "status": "PASS"
+    },
+    {
+      "name": "C08 dtype/input/camera-gradient preservation",
+      "status": "PASS"
+    }
+  ],
+  "optimizer_steps": 0,
+  "passed": 8,
+  "total": 8,
+  "all_passed": true
+}

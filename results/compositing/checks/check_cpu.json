@@ -1,0 +1,152 @@
+{
+  "timestamp_utc": "2026-10-11T15:34:50.888822+00:00",
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "H:\\anaconda3\\envs\\wm_gsplat\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "gsplat": "1.5.3+pt24cu124",
+    "numpy": "1.26.4",
+    "Pillow": "10.4.0"
+  },
+  "exercise_sha256": "8cf633adb07744b6bed31cc16d3fead0ff38e32bbe7b7e735d09d5f0379d10fe",
+  "optimizer_steps": 0,
+  "source_hashes": {
+    "check_day4.py": "99d796fc5a8a52f827ccf28d5ed6070c273a4636a539db60a93b91eb338a72dd",
+    "compare_gsplat.py": "cc010ddb866d0b2d2f9a70fa3bfbdb16355fbeaae1bd40468e2692b92f1fa15a",
+    "compositing_packet.py": "a9ebbd65b2cff55d7c49ddbeff24aa46ea7f9d3d9824f06bf8dbcbd125dec3b9",
+    "day4_exercise.py": "8cf633adb07744b6bed31cc16d3fead0ff38e32bbe7b7e735d09d5f0379d10fe",
+    "fixtures_day4.py": "5e8f35323a97ae8d9c604c2881a0eeb7c86eb3b6ee0b8ff8d35ec628fffc8d92",
+    "run_day4.py": "72425c737ae49a5237b4a0e46c20cb4f75ceadc11d8bfd9d6e8b76a50f0eb741",
+    "runtime_support.py": "8c619bce4f3c7245a13fc650dbb2e4babaab97bd5a20fb55b263abee7769e552"
+  },
+  "day": "WM-W04-DAY4",
+  "mode": "cpu",
+  "status": "PASSED",
+  "expected_checks": 24,
+  "executed": 24,
+  "passed": 24,
+  "checks": [
+    {
+      "id": "A1",
+      "name": "check_a1_center",
+      "status": "PASSED"
+    },
+    {
+      "id": "A2",
+      "name": "check_a2_anisotropic_axes",
+      "status": "PASSED"
+    },
+    {
+      "id": "A3",
+      "name": "check_a3_full_covariance",
+      "status": "PASSED"
+    },
+    {
+      "id": "A4",
+      "name": "check_a4_opacity_no_activation_or_cap",
+      "status": "PASSED"
+    },
+    {
+      "id": "A5",
+      "name": "check_a5_translation_invariance",
+      "status": "PASSED"
+    },
+    {
+      "id": "A6",
+      "name": "check_a6_all_pairs",
+      "status": "PASSED"
+    },
+    {
+      "id": "A7",
+      "name": "check_a7_pixel_centers_dtype_inputs",
+      "status": "PASSED"
+    },
+    {
+      "id": "A8",
+      "name": "check_a8_autograd",
+      "status": "PASSED"
+    },
+    {
+      "id": "S1",
+      "name": "check_s1_front_to_back",
+      "status": "PASSED"
+    },
+    {
+      "id": "S2",
+      "name": "check_s2_stable_ties",
+      "status": "PASSED"
+    },
+    {
+      "id": "S3",
+      "name": "check_s3_sorted_and_single",
+      "status": "PASSED"
+    },
+    {
+      "id": "S4",
+      "name": "check_s4_nonpositive",
+      "status": "PASSED"
+    },
+    {
+      "id": "S5",
+      "name": "check_s5_nonfinite",
+      "status": "PASSED"
+    },
+    {
+      "id": "S6",
+      "name": "check_s6_shape_and_empty",
+      "status": "PASSED"
+    },
+    {
+      "id": "S7",
+      "name": "check_s7_dtype_indices_and_inputs",
+      "status": "PASSED"
+    },
+    {
+      "id": "S8",
+      "name": "check_s8_monotonic_depth_change",
+      "status": "PASSED"
+    },
+    {
+      "id": "C1",
+      "name": "check_c1_single_with_background",
+      "status": "PASSED"
+    },
+    {
+      "id": "C2",
+      "name": "check_c2_exclusive_three_layers",
+      "status": "PASSED"
+    },
+    {
+      "id": "C3",
+      "name": "check_c3_zero_one_and_empty",
+      "status": "PASSED"
+    },
+    {
+      "id": "C4",
+      "name": "check_c4_color_order_alpha_invariance",
+      "status": "PASSED"
+    },
+    {
+      "id": "C5",
+      "name": "check_c5_background_mass_identity",
+      "status": "PASSED"
+    },
+    {
+      "id": "C6",
+      "name": "check_c6_packet_input_permutation",
+      "status": "PASSED"
+    },
+    {
+      "id": "C7",
+      "name": "check_c7_batch_dtype_inputs",
+      "status": "PASSED"
+    },
+    {
+      "id": "C8",
+      "name": "check_c8_autograd",
+      "status": "PASSED"
+    }
+  ]
+}

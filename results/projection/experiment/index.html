@@ -1,0 +1,21 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<title>WM-W04 Day3 · Local projection experiments</title>
+<style>body{max-width:900px;margin:32px auto;padding:0 20px;font:16px/1.6 system-ui}
+section{margin:36px 0;padding-top:12px;border-top:1px solid}img{max-width:100%;height:auto}
+code{font-family:monospace}</style>
+<h1>WM-W04 Day3：本地投影实验</h1>
+<p>实线是 raw 协方差的 1-sigma 等值轮廓。虚线是加 eps2d 后的轮廓。
+两者都不是硬边界、最终像素 alpha、3DGS 包围半径或可见性结论。</p>
+<p>每张图使用相同像素坐标和图像尺寸。画框裁剪仅发生在显示阶段，浮点投影值不会被裁剪。
+深度无效项保留在 NPZ/CSV 中。原始 signed Z 不被改成正值。</p>
+<p><a href="projection_stats.csv">projection_stats.csv</a> ·
+<a href="experiment_report.json">experiment_report.json</a></p><section><h2>01_baseline</h2><p>Baseline: fixed world covariance; identity OpenCV c2w.</p><img src="01_baseline/ellipse.svg" alt="01_baseline projection contour"><p><a href="01_baseline/input_and_projection.npz">Floating arrays and inputs</a></p></section>
+<section><h2>02_camera_right</h2><p>Camera center moves +0.35 along world X; scene stays fixed.</p><img src="02_camera_right/ellipse.svg" alt="02_camera_right projection contour"><p><a href="02_camera_right/input_and_projection.npz">Floating arrays and inputs</a></p></section>
+<section><h2>03_camera_forward</h2><p>Camera center moves +0.60 along world Z; scene stays fixed.</p><img src="03_camera_forward/ellipse.svg" alt="03_camera_forward projection contour"><p><a href="03_camera_forward/input_and_projection.npz">Floating arrays and inputs</a></p></section>
+<section><h2>04_camera_yaw</h2><p>Camera c2w rotates +15 degrees about world Y; center stays fixed.</p><img src="04_camera_yaw/ellipse.svg" alt="04_camera_yaw projection contour"><p><a href="04_camera_yaw/input_and_projection.npz">Floating arrays and inputs</a></p></section>
+<section><h2>05_focal_x2</h2><p>Double fx and fy only. Image size and principal point stay fixed.</p><img src="05_focal_x2/ellipse.svg" alt="05_focal_x2 projection contour"><p><a href="05_focal_x2/input_and_projection.npz">Floating arrays and inputs</a></p></section>
+<section><h2>06_principal_shift</h2><p>Shift cx +30 and cy -20 only. Same focal lengths and scene.</p><img src="06_principal_shift/ellipse.svg" alt="06_principal_shift projection contour"><p><a href="06_principal_shift/input_and_projection.npz">Floating arrays and inputs</a></p></section>
+<section><h2>07_same_ray_farther</h2><p>Double all three coordinates of the world mean; covariance unchanged.</p><img src="07_same_ray_farther/ellipse.svg" alt="07_same_ray_farther projection contour"><p><a href="07_same_ray_farther/input_and_projection.npz">Floating arrays and inputs</a></p></section>
+<section><h2>08_small_footprint</h2><p>Divide world covariance by 400; inspect raw versus +0.3 pixel^2.</p><img src="08_small_footprint/ellipse.svg" alt="08_small_footprint projection contour"><p><a href="08_small_footprint/input_and_projection.npz">Floating arrays and inputs</a></p></section>
+<section><h2>09_center_outside</h2><p>Positive depth, center outside image. This is not a visibility test.</p><img src="09_center_outside/ellipse.svg" alt="09_center_outside projection contour"><p><a href="09_center_outside/input_and_projection.npz">Floating arrays and inputs</a></p></section>
+<section><h2>10_depth_boundary</h2><p>Mixed signed Z: valid, behind, zero, at near, just beyond near.</p><img src="10_depth_boundary/ellipse.svg" alt="10_depth_boundary projection contour"><p><a href="10_depth_boundary/input_and_projection.npz">Floating arrays and inputs</a></p></section></html>

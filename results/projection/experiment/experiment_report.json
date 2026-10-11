@@ -1,0 +1,161 @@
+{
+  "timestamp_utc": "2026-10-11T13:22:20.303368+00:00",
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "H:\\anaconda3\\envs\\wm_gsplat\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "gsplat": "1.5.3+pt24cu124",
+    "numpy": "1.26.4",
+    "Pillow": "10.4.0"
+  },
+  "exercise_sha256": "01f94e0867c0b85caf1896168a9a81bcfea814c88f04a70beeb23adbcbe26be1",
+  "optimizer_steps": 0,
+  "source_hashes": {
+    "check_day3.py": "3544a46a1914e60e3312b8310736a82ed327d2bc65cef5c970b18a1e14072509",
+    "compare_gsplat.py": "1ced15676bd26d0ac8d31d5b266902ae5fd2b2aece0c27a92c22a122ff33d420",
+    "day3_exercise.py": "01f94e0867c0b85caf1896168a9a81bcfea814c88f04a70beeb23adbcbe26be1",
+    "fixtures_day3.py": "041e6d0e151f6d42244f30092570ff3001fe8ba9bde6b59d4d77263bb8a6cc84",
+    "projection_packet.py": "994bf09c148d41661d5f06168a4f585b9354e350a6c8271697095e7e965a8b28",
+    "run_day3.py": "546d39ac05876c9e8e37bb1524e1dda388ac10f68a883d7b999669f4f6d35228",
+    "runtime_support.py": "ba381fa24d9329e9d43cf2fa292588162c41a3b18d35bbbfb317943d4a726e5a"
+  },
+  "day": "WM-W04-DAY3",
+  "status": "COMPLETED",
+  "expected_scenarios": 10,
+  "rasterization_used": false,
+  "interpretation": "local_first_order_projection",
+  "scenarios": [
+    {
+      "id": "01_baseline",
+      "gaussians": 1,
+      "valid_depth_count": 1,
+      "center_in_image_count": 1,
+      "description": "Baseline: fixed world covariance; identity OpenCV c2w."
+    },
+    {
+      "id": "02_camera_right",
+      "gaussians": 1,
+      "valid_depth_count": 1,
+      "center_in_image_count": 1,
+      "description": "Camera center moves +0.35 along world X; scene stays fixed."
+    },
+    {
+      "id": "03_camera_forward",
+      "gaussians": 1,
+      "valid_depth_count": 1,
+      "center_in_image_count": 1,
+      "description": "Camera center moves +0.60 along world Z; scene stays fixed."
+    },
+    {
+      "id": "04_camera_yaw",
+      "gaussians": 1,
+      "valid_depth_count": 1,
+      "center_in_image_count": 1,
+      "description": "Camera c2w rotates +15 degrees about world Y; center stays fixed."
+    },
+    {
+      "id": "05_focal_x2",
+      "gaussians": 1,
+      "valid_depth_count": 1,
+      "center_in_image_count": 1,
+      "description": "Double fx and fy only. Image size and principal point stay fixed."
+    },
+    {
+      "id": "06_principal_shift",
+      "gaussians": 1,
+      "valid_depth_count": 1,
+      "center_in_image_count": 1,
+      "description": "Shift cx +30 and cy -20 only. Same focal lengths and scene."
+    },
+    {
+      "id": "07_same_ray_farther",
+      "gaussians": 1,
+      "valid_depth_count": 1,
+      "center_in_image_count": 1,
+      "description": "Double all three coordinates of the world mean; covariance unchanged."
+    },
+    {
+      "id": "08_small_footprint",
+      "gaussians": 1,
+      "valid_depth_count": 1,
+      "center_in_image_count": 1,
+      "description": "Divide world covariance by 400; inspect raw versus +0.3 pixel^2."
+    },
+    {
+      "id": "09_center_outside",
+      "gaussians": 1,
+      "valid_depth_count": 1,
+      "center_in_image_count": 0,
+      "description": "Positive depth, center outside image. This is not a visibility test."
+    },
+    {
+      "id": "10_depth_boundary",
+      "gaussians": 5,
+      "valid_depth_count": 2,
+      "center_in_image_count": 2,
+      "description": "Mixed signed Z: valid, behind, zero, at near, just beyond near."
+    }
+  ],
+  "executed_scenarios": 10,
+  "sample_rows": 14,
+  "output_dir": "D:\\WM_Study\\Daily\\Week4_Day3\\outputs\\day3",
+  "all_outputs_from_local_run": true,
+  "artifact_sha256": {
+    "01_baseline/ellipse.svg": "b44a3641fe9f6532f3d04860f640a1dff52b4378191e65674ce6240ed8a77e27",
+    "01_baseline/input_and_projection.npz": "1c66b551ec62660031d2ae58bd6937b98ce3828b112230475fb724bcee1dcbf2",
+    "02_camera_right/ellipse.svg": "656d630edd9d7583d0036421ae78878010a57bd5ace54f803a6ec8229fed9b95",
+    "02_camera_right/input_and_projection.npz": "762777b348d22f4c00ee712f61bde83f788bc81856a30fae5697690dd2ad3dbb",
+    "03_camera_forward/ellipse.svg": "3ac7a2f48ad119ca739057b8c68ed58f813268f4697f5f79292a2e0c02486e82",
+    "03_camera_forward/input_and_projection.npz": "72a54fcfc040e3d0964a0c35ff2ccaa5fb17ae6fb9d851aa6eb79bf621703fb3",
+    "04_camera_yaw/ellipse.svg": "7c3c64915fed4eae7f1249ef447598cc00f201475bf1324c39606be79f6cecce",
+    "04_camera_yaw/input_and_projection.npz": "5f314eb8bc1685470febfe88e9f2e7206ed1f2946ff4975ce138b97998b39a45",
+    "05_focal_x2/ellipse.svg": "358c0c43d18652db469ad9d17e88e71b660b4b12be6e680a20b595534d6fb646",
+    "05_focal_x2/input_and_projection.npz": "4f75fecb2348363c3459e0f18d910cb74a7d4ac5a3b9e254d0d527fee40f6652",
+    "06_principal_shift/ellipse.svg": "2f1ff77dc12f056491dc4547830fd29da1a13b8e3d57e15cb32b5d051b6d9b0a",
+    "06_principal_shift/input_and_projection.npz": "acd60c567406bf17a0a3767f46e47de81a14a954524e71384fcbdd997119b101",
+    "07_same_ray_farther/ellipse.svg": "97f24538a85f19266dd4a3c296d6b1cbd1e2b73becddc26f98bd52fc447fc8b2",
+    "07_same_ray_farther/input_and_projection.npz": "c1327520e04c1020aeb52d30bf4f45ac339f954fe5d3e810f18d65163e066423",
+    "08_small_footprint/ellipse.svg": "57d1fa29be161a098caefba85df18d9de0d0de0a221b15312beda47c557ee44d",
+    "08_small_footprint/input_and_projection.npz": "deb066335f4eb962410cb9c3a542a808c55eecb491157b9d5a59a22026f0bfa4",
+    "09_center_outside/ellipse.svg": "e86353185160b86f3804fa30295b275f469de3e2a53a3212e92740b7297c9dc2",
+    "09_center_outside/input_and_projection.npz": "7e011fb99ce84dc86026735b85fe1a03f4fb344004b64329f9bc4e36f06283b1",
+    "10_depth_boundary/ellipse.svg": "d1b98b354ef5e191ae7bfb0c60be70e412a1a880d33a940a9f8b005dc7f03fe7",
+    "10_depth_boundary/input_and_projection.npz": "5ecb1864f01ff62ff369230f0a0c03e4c20d31cd07cfd8929580f475935f69cf",
+    "index.html": "b64b278ba40f48493a1ede0a2bd21ca388415b8ac50fc3c15d78cfe1da38d985",
+    "projection_stats.csv": "70eef0ce67b95607815da1b914147a163cb3c388a011295263e565ef93a21f8f"
+  },
+  "presentation_updates": [
+    {
+      "timestamp_utc": "2026-10-11T13:58:49.713905+00:00",
+      "description": "Re-rendered all 10 SVGs from unchanged saved NPZ arrays with an opaque white background and explicit dark foreground. No numerical experiment was rerun; original source_hashes describe the original experiment.",
+      "renderer_sha256": "03363797968301f2be771e9ef40956fbc771eeef9068ff13d520cd552ab77772",
+      "changed_files": [
+        "01_baseline/ellipse.svg",
+        "02_camera_right/ellipse.svg",
+        "03_camera_forward/ellipse.svg",
+        "04_camera_yaw/ellipse.svg",
+        "05_focal_x2/ellipse.svg",
+        "06_principal_shift/ellipse.svg",
+        "07_same_ray_farther/ellipse.svg",
+        "08_small_footprint/ellipse.svg",
+        "09_center_outside/ellipse.svg",
+        "10_depth_boundary/ellipse.svg"
+      ],
+      "previous_svg_sha256": {
+        "01_baseline/ellipse.svg": "df1b3acfb402fb94814f57e20d19413b7024c0e013c0b428439f0b168a67dcaf",
+        "02_camera_right/ellipse.svg": "0233f8a519ef2e1574eab467251175f3df18822b951e06670e11337fdec5895c",
+        "03_camera_forward/ellipse.svg": "d163bcd8eb152c397d81999c69b0ec661461dea17aa2da5380bd5470c1e45e02",
+        "04_camera_yaw/ellipse.svg": "07160edd74b9bbe36b5a7d109a4bfd7fcd3256e8c6038081e18bec249b27111b",
+        "05_focal_x2/ellipse.svg": "35770f29ab2ee83de2b6c95b0042caf02726e6db636f6c7505843be3b55a9372",
+        "06_principal_shift/ellipse.svg": "63468197dd9a2fcb49b3e4a983b2ff434773622102350f882a6330792ab7a5a3",
+        "07_same_ray_farther/ellipse.svg": "14cdc089d8457003601b9566cfe543480c7b90ad71a7cb68b1ed71491cf65282",
+        "08_small_footprint/ellipse.svg": "e6686cd601ceef6fd9d1a443deecf6cd11028cf0e548624996ef94d6742f39a6",
+        "09_center_outside/ellipse.svg": "c558d7fe2dcf7ece1c5912113e204b438f27bdc270a19b732fad01a572c8a1b4",
+        "10_depth_boundary/ellipse.svg": "d0012743aba4e6011d2320ec61356b0efb669f3154d8f996988cfa0eff09839c"
+      },
+      "backup_directory": "reports/before_white_background_20261011_215843"
+    }
+  ]
+}

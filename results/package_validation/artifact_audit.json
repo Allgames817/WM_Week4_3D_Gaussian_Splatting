@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "package": "WM_Week4_3D_Gaussian_Splatting",
+  "archive": {
+    "copied_files_checked": 767
+  },
+  "documents": {
+    "markdown_files": 16,
+    "html_files": 23,
+    "local_links": 630
+  },
+  "package_files": {
+    "files": 788,
+    "bytes": 22144402,
+    "largest_file": "results/validation/adaptive_review/trajectory_float.npz",
+    "largest_file_bytes": 2033107
+  },
+  "metrics": {
+    "numpy_version": "1.26.4",
+    "conditions": [
+      {
+        "run": "appearance",
+        "stage": "initial",
+        "split": "train",
+        "sse": 345.1136341535029,
+        "scalar_count": 92160,
+        "mse": 0.0037447225928114464,
+        "psnr_db": 24.265803490922945,
+        "psnr_is_infinite": false,
+        "max_abs_error": 0.426170751452446,
+        "contrast_mask_pixel_count": 12176,
+        "contrast_mask_mse": 0.008941755404155741
+      },
+      {
+        "run": "appearance",
+        "stage": "initial",
+        "split": "val",
+        "sse": 137.9363399353822,
+        "scalar_count": 36864,
+        "mse": 0.00374176269355963,
+        "psnr_db": 24.2692375936557,
+        "psnr_is_infinite": false,
+        "max_abs_error": 0.4160337448120117,
+        "contrast_mask_pixel_count": 4869,
+        "contrast_mask_mse": 0.008938233366087964
+      },
+      {
+        "run": "appearance",
+        "stage": "final",
+        "split": "train",
+        "sse": 279.68067036447616,
+        "scalar_count": 92160,
+        "mse": 0.0030347294961423194,
+        "psnr_db": 25.17880014166433,
+        "psnr_is_infinite": false,
+        "max_abs_error": 0.43230757117271423,
+        "contrast_mask_pixel_count": 12176,
+        "contrast_mask_mse": 0.0074668974487805
+      },
+      {
+        "run": "appearance",
+        "stage": "final",
+        "split": "val",
+        "sse": 111.80419580708953,
+        "scalar_count": 36864,
+        "mse": 0.003032882915773913,
+        "psnr_db": 25.18144355272853,
+        "psnr_is_infinite": false,
+        "max_abs_error": 0.4241615831851959,
+        "contrast_mask_pixel_count": 4869,
+        "contrast_mask_mse": 0.007464578627171455
+      },
+      {
+        "run": "joint",
+        "stage": "initial",
+        "split": "train",
+        "sse": 345.1136341535029,
+        "scalar_count": 92160,
+        "mse": 0.0037447225928114464,
+        "psnr_db": 24.265803490922945,
+        "psnr_is_infinite": false,
+        "max_abs_error": 0.426170751452446,
+        "contrast_mask_pixel_count": 12176,
+        "contrast_mask_mse": 0.008941755404155741
+      },
+      {
+        "run": "joint",
+        "stage": "initial",
+        "split": "val",
+        "sse": 137.9363399353822,
+        "scalar_count": 36864,
+        "mse": 0.00374176269355963,
+        "psnr_db": 24.2692375936557,
+        "psnr_is_infinite": false,
+        "max_abs_error": 0.4160337448120117,
+        "contrast_mask_pixel_count": 4869,
+        "contrast_mask_mse": 0.008938233366087964
+      },
+      {
+        "run": "joint",
+        "stage": "final",
+        "split": "train",
+        "sse": 0.40344353969678215,
+        "scalar_count": 92160,
+        "mse": 4.377642574834875e-06,
+        "psnr_db": 53.5875970053733,
+        "psnr_is_infinite": false,
+        "max_abs_error": 0.04706721007823944,
+        "contrast_mask_pixel_count": 12176,
+        "contrast_mask_mse": 1.095720074323054e-05
+      },
+      {
+        "run": "joint",
+        "stage": "final",
+        "split": "val",
+        "sse": 0.1612743601020425,
+        "scalar_count": 36864,
+        "mse": 4.374847007976413e-06,
+        "psnr_db": 53.590371300138735,
+        "psnr_is_infinite": false,
+        "max_abs_error": 0.04638424515724182,
+        "contrast_mask_pixel_count": 4869,
+        "contrast_mask_mse": 1.0944281001724375e-05
+      },
+      {
+        "run": "fixed",
+        "stage": "initial",
+        "split": "train",
+        "sse": 0.40344353969678215,
+        "scalar_count": 92160,
+        "mse": 4.377642574834875e-06,
+        "psnr_db": 53.5875970053733,
+        "psnr_is_infinite": false,
+        "max_abs_error": 0.04706721007823944,
+        "contrast_mask_pixel_count": 12176,
+        "contrast_mask_mse": 1.095720074323054e-05
+      },
+      {
+        "run": "fixed",
+        "stage": "initial",
+        "split": "val",
+        "sse": 0.1612743601020425,
+        "scalar_count": 36864,
+        "mse": 4.374847007976413e-06,
+        "psnr_db": 53.590371300138735,
+        "psnr_is_infinite": false,
+        "max_abs_error": 0.04638424515724182,
+        "contrast_mask_pixel_count": 4869,
+        "contrast_mask_mse": 1.0944281001724375e-05
+      },
+      {
+        "run": "fixed",
+        "stage": "final",
+        "split": "train",
+        "sse": 0.4089409774224363,
+        "scalar_count": 92160,
+        "mse": 4.43729359182331e-06,
+        "psnr_db": 53.5288183540548,
+        "psnr_is_infinite": false,
+        "max_abs_error": 0.025789588689804077,
+        "contrast_mask_pixel_count": 12176,
+        "contrast_mask_mse": 1.1005229201715245e-05
+      },
+      {
+        "run": "fixed",
+        "stage": "final",
+        "split": "val",
+        "sse": 0.16294683396812337,
+        "scalar_count": 36864,
+        "mse": 4.420215765194319e-06,
+        "psnr_db": 53.545565307988255,
+        "psnr_is_infinite": false,
+        "max_abs_error": 0.02566838264465332,
+        "contrast_mask_pixel_count": 4869,
+        "contrast_mask_mse": 1.096323678333945e-05
+      },
+      {
+        "run": "adaptive",
+        "stage": "initial",
+        "split": "train",
+        "sse": 0.40344353969678215,
+        "scalar_count": 92160,
+        "mse": 4.377642574834875e-06,
+        "psnr_db": 53.5875970053733,
+        "psnr_is_infinite": false,
+        "max_abs_error": 0.04706721007823944,
+        "contrast_mask_pixel_count": 12176,
+        "contrast_mask_mse": 1.095720074323054e-05
+      },
+      {
+        "run": "adaptive",
+        "stage": "initial",
+        "split": "val",
+        "sse": 0.1612743601020425,
+        "scalar_count": 36864,
+        "mse": 4.374847007976413e-06,
+        "psnr_db": 53.590371300138735,
+        "psnr_is_infinite": false,
+        "max_abs_error": 0.04638424515724182,
+        "contrast_mask_pixel_count": 4869,
+        "contrast_mask_mse": 1.0944281001724375e-05
+      },
+      {
+        "run": "adaptive",
+        "stage": "final",
+        "split": "train",
+        "sse": 0.16552550275093347,
+        "scalar_count": 92160,
+        "mse": 1.7960666531134273e-06,
+        "psnr_db": 57.456775504402984,
+        "psnr_is_infinite": false,
+        "max_abs_error": 0.017753079533576965,
+        "contrast_mask_pixel_count": 12176,
+        "contrast_mask_mse": 4.3727420369473675e-06
+      },
+      {
+        "run": "adaptive",
+        "stage": "final",
+        "split": "val",
+        "sse": 0.06559898964314874,
+        "scalar_count": 36864,
+        "mse": 1.7794864812052067e-06,
+        "psnr_db": 57.497053069915665,
+        "psnr_is_infinite": false,
+        "max_abs_error": 0.017624571919441223,
+        "contrast_mask_pixel_count": 4869,
+        "contrast_mask_mse": 4.338927012366602e-06
+      }
+    ],
+    "reloads": [
+      {
+        "run": "appearance",
+        "max_abs_rgb_difference": 0.0
+      },
+      {
+        "run": "joint",
+        "max_abs_rgb_difference": 0.0
+      },
+      {
+        "run": "fixed",
+        "max_abs_rgb_difference": 0.0
+      },
+      {
+        "run": "adaptive",
+        "max_abs_rgb_difference": 0.0
+      }
+    ],
+    "trajectories": [
+      {
+        "model": "fixed",
+        "frames": 61,
+        "return_max_abs_rgb_difference": 0.0,
+        "start_vs_final_view0_max_abs_difference": 0.0
+      },
+      {
+        "model": "adaptive",
+        "frames": 61,
+        "return_max_abs_rgb_difference": 0.0,
+        "start_vs_final_view0_max_abs_difference": 0.0
+      }
+    ],
+    "paired_initial_images_match": true,
+    "scope": "Archived float arrays only. No training, rendering, CUDA execution or checkpoint loading."
+  },
+  "status": "PASS",
+  "errors": []
+}

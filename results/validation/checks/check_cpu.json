@@ -1,0 +1,127 @@
+{
+  "day": "WM-W04-DAY7",
+  "timestamp_utc": "2026-10-11T18:25:34.527338+00:00",
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "H:\\anaconda3\\envs\\wm_gsplat\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "gsplat": "1.5.3+pt24cu124",
+    "numpy": "1.26.4",
+    "Pillow": "10.4.0"
+  },
+  "source_hashes": {
+    "audit_week4.py": "a01177a49718a6cbaa7d3e02f7908947f935d5ab375e1901acaa76c4752c4c45",
+    "check_day7.py": "bae4518ee5460137566ea1764717a168ac8bc2000889ad955441ed32f870816c",
+    "day7_exercise.py": "a50145d7b12e51195ec6aa5e2d2958ea1d0921226f4f434b62f0e0b4eb61b3f9",
+    "evidence_io.py": "d3bf1d864cdedaa822e05988910bcf28360517ba5a9a463bd746d91cf86a38c0",
+    "render_review.py": "3d4b0df3261fa5e7911810957f990d9cf1cfa7f8ca8d7355dee1dff1cf654d85",
+    "run_interface.py": "d44fcaeb63b59b3595ad6f1175a5364bc65369750d629e3546c1a754794fadc2",
+    "support.py": "51d1dba502472fb09d441958d8610536ae61627cf9267614e1a25b59bbba7a8c",
+    "video_io.py": "931a9becfff3d3485f288ef127ad2f5f88fcab8edbe8ed2e7105a4b4aae0280e"
+  },
+  "status": "PASSED",
+  "mode": "cpu",
+  "passed": 24,
+  "executed": 24,
+  "expected_checks": 24,
+  "checks": [
+    {
+      "name": "p01",
+      "status": "PASSED"
+    },
+    {
+      "name": "p02",
+      "status": "PASSED"
+    },
+    {
+      "name": "p03",
+      "status": "PASSED"
+    },
+    {
+      "name": "p04",
+      "status": "PASSED"
+    },
+    {
+      "name": "p05",
+      "status": "PASSED"
+    },
+    {
+      "name": "p06",
+      "status": "PASSED"
+    },
+    {
+      "name": "p07",
+      "status": "PASSED"
+    },
+    {
+      "name": "p08",
+      "status": "PASSED"
+    },
+    {
+      "name": "c01",
+      "status": "PASSED"
+    },
+    {
+      "name": "c02",
+      "status": "PASSED"
+    },
+    {
+      "name": "c03",
+      "status": "PASSED"
+    },
+    {
+      "name": "c04",
+      "status": "PASSED"
+    },
+    {
+      "name": "c05",
+      "status": "PASSED"
+    },
+    {
+      "name": "c06",
+      "status": "PASSED"
+    },
+    {
+      "name": "c07",
+      "status": "PASSED"
+    },
+    {
+      "name": "c08",
+      "status": "PASSED"
+    },
+    {
+      "name": "m01",
+      "status": "PASSED"
+    },
+    {
+      "name": "m02",
+      "status": "PASSED"
+    },
+    {
+      "name": "m03",
+      "status": "PASSED"
+    },
+    {
+      "name": "m04",
+      "status": "PASSED"
+    },
+    {
+      "name": "m05",
+      "status": "PASSED"
+    },
+    {
+      "name": "m06",
+      "status": "PASSED"
+    },
+    {
+      "name": "m07",
+      "status": "PASSED"
+    },
+    {
+      "name": "m08",
+      "status": "PASSED"
+    }
+  ]
+}

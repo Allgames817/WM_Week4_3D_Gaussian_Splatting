@@ -1,0 +1,33 @@
+{
+  "train": {
+    "sse": 279.6806703644761,
+    "scalar_count": 92160,
+    "mse": 0.003034729496142319,
+    "psnr_db": 25.17880014166433,
+    "psnr_is_infinite": false,
+    "max_abs_error": 0.43230757117271423,
+    "contrast_mask_pixel_count": 12176,
+    "contrast_mask_mse": 0.0074668974487805,
+    "view_ids": [
+      0,
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  "val": {
+    "sse": 111.80419580708954,
+    "scalar_count": 36864,
+    "mse": 0.0030328829157739135,
+    "psnr_db": 25.18144355272853,
+    "psnr_is_infinite": false,
+    "max_abs_error": 0.4241615831851959,
+    "contrast_mask_pixel_count": 4869,
+    "contrast_mask_mse": 0.007464578627171457,
+    "view_ids": [
+      1,
+      5
+    ]
+  }
+}

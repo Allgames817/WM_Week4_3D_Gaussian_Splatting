@@ -1,0 +1,51 @@
+{
+  "timestamp_utc": "2026-10-11T12:08:08.677400+00:00",
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "H:\\anaconda3\\envs\\wm_gsplat\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "gsplat": "1.5.3+pt24cu124",
+    "numpy": "1.26.4",
+    "Pillow": "10.4.0"
+  },
+  "exercise_sha256": "38d52c09662dc40b1d240f1d73380a159e27cf77e46c4cb20c32036ee4363699",
+  "optimizer_steps": 0,
+  "status": "PASSED",
+  "mode": "optional_cuda_comparison",
+  "expected_checks": 3,
+  "executed": 3,
+  "passed": 3,
+  "checks": [
+    {
+      "id": "S1",
+      "passed": true,
+      "metrics": {
+        "max_abs": 2.7939677238464355e-09
+      }
+    },
+    {
+      "id": "S2",
+      "passed": true,
+      "metrics": {
+        "identity_max_abs": 5.364418029785156e-07
+      }
+    },
+    {
+      "id": "S3",
+      "passed": true,
+      "metrics": {
+        "quaternion_gradient_max_abs": 6.492623327858382e-09,
+        "scales_gradient_max_abs": 2.9802322387695312e-08
+      }
+    }
+  ],
+  "camera_used": false,
+  "rasterization_used": false,
+  "native": {
+    "version": "1.5.3+pt24cu124",
+    "native_extension": "H:\\anaconda3\\envs\\wm_gsplat\\lib\\site-packages\\gsplat\\csrc.pyd"
+  },
+  "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU"
+}

@@ -1,0 +1,137 @@
+{
+  "day": "WM-W04-DAY7",
+  "timestamp_utc": "2026-10-11T18:32:01.266170+00:00",
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "H:\\anaconda3\\envs\\wm_gsplat\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "gsplat": "1.5.3+pt24cu124",
+    "numpy": "1.26.4",
+    "Pillow": "10.4.0"
+  },
+  "source_hashes": {
+    "audit_week4.py": "a01177a49718a6cbaa7d3e02f7908947f935d5ab375e1901acaa76c4752c4c45",
+    "check_day7.py": "bae4518ee5460137566ea1764717a168ac8bc2000889ad955441ed32f870816c",
+    "day7_exercise.py": "a50145d7b12e51195ec6aa5e2d2958ea1d0921226f4f434b62f0e0b4eb61b3f9",
+    "evidence_io.py": "d3bf1d864cdedaa822e05988910bcf28360517ba5a9a463bd746d91cf86a38c0",
+    "render_review.py": "3d4b0df3261fa5e7911810957f990d9cf1cfa7f8ca8d7355dee1dff1cf654d85",
+    "run_interface.py": "d44fcaeb63b59b3595ad6f1175a5364bc65369750d629e3546c1a754794fadc2",
+    "support.py": "51d1dba502472fb09d441958d8610536ae61627cf9267614e1a25b59bbba7a8c",
+    "video_io.py": "931a9becfff3d3485f288ef127ad2f5f88fcab8edbe8ed2e7105a4b4aae0280e"
+  },
+  "native": {
+    "version": "1.5.3+pt24cu124",
+    "native_extension": "H:\\anaconda3\\envs\\wm_gsplat\\lib\\site-packages\\gsplat\\csrc.pyd",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "torch_cuda": "12.4"
+  },
+  "expected_checks": 4,
+  "checks": [
+    {
+      "name": "checkpoint_vs_saved_rgb",
+      "status": "PASSED",
+      "max_abs_rgb_difference": 0.0
+    },
+    {
+      "name": "all_views_vs_single_view_calls",
+      "status": "PASSED",
+      "max_abs_rgb_difference": 0.0
+    },
+    {
+      "name": "A_B_A_same_camera_repeat",
+      "status": "PASSED",
+      "max_abs_rgb_difference": 0.0
+    },
+    {
+      "name": "frozen_parameters_and_checkpoint_unchanged",
+      "status": "PASSED",
+      "max_abs_rgb_difference": 0.0
+    }
+  ],
+  "A_B_max_abs_rgb_difference": 0.6271535754203796,
+  "status": "PASSED",
+  "model": "fixed",
+  "passed": 4,
+  "executed": 4,
+  "audit_sha256": "5658f43c3a8858ad9e183ffffd4bb512f73c4d835c19791d0d0406c6e4aeaad2",
+  "checkpoint_sha256": "e30ce90b1e0626b4b08d8c535b846e5710f9477368748566738680085ed89793",
+  "dataset_sha256": "51d579640f0ecc5b28906eff9f0f716b90042eda0539d4e0fdc22fce04185af5",
+  "gaussian_count": 12,
+  "metrics": {
+    "train": {
+      "sse": 0.4089409774224363,
+      "scalar_count": 92160,
+      "mse": 4.43729359182331e-06,
+      "psnr_db": 53.5288183540548,
+      "psnr_is_infinite": false,
+      "max_abs_error": 0.025789588689804077,
+      "contrast_mask_pixel_count": 12176,
+      "contrast_mask_mse": 1.1005229201715245e-05,
+      "view_ids": [
+        0,
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    "val": {
+      "sse": 0.16294683396812337,
+      "scalar_count": 36864,
+      "mse": 4.420215765194319e-06,
+      "psnr_db": 53.545565307988255,
+      "psnr_is_infinite": false,
+      "max_abs_error": 0.02566838264465332,
+      "contrast_mask_pixel_count": 4869,
+      "contrast_mask_mse": 1.096323678333945e-05,
+      "view_ids": [
+        1,
+        5
+      ]
+    }
+  },
+  "render_options": {
+    "width": 96,
+    "height": 64,
+    "sh_degree": null,
+    "render_mode": "RGB",
+    "rasterize_mode": "classic",
+    "camera_model": "pinhole",
+    "packed": false,
+    "sparse_grad": false,
+    "near_plane": 0.01,
+    "far_plane": 10.0,
+    "eps2d": 0.3,
+    "radius_clip": 0.0
+  },
+  "timing": {
+    "warmup_calls": 20,
+    "measured_calls": 50,
+    "camera_id": 3,
+    "batch_size": 1,
+    "synchronized_render_call_ms_median": 0.33850000181701034,
+    "synchronized_render_call_ms_p90": 0.46758999451412825,
+    "reciprocal_median_calls_per_second": 2954.209733034477,
+    "baseline_torch_cuda_allocated_bytes": 524288,
+    "peak_torch_cuda_allocated_bytes": 651776,
+    "incremental_peak_torch_cuda_allocated_bytes": 127488,
+    "peak_torch_cuda_reserved_bytes": 4194304,
+    "scope": "Synchronized host wall time for one gsplat rasterization call on prepared GPU inputs. Includes Python dispatch, GPU work and synchronization, not pure kernel time. Excludes activation, host transfer, PNG/AVI and disk I/O. Tiny scene, not paper FPS.",
+    "tf32_matmul": false
+  },
+  "trajectory_frames": 61,
+  "trajectory": "0 through 6 through 0; 5 interpolation intervals per adjacent camera pair; fixed orientation",
+  "display_export_seconds": 0.12698919999820646,
+  "trajectory_mse_or_psnr": null,
+  "trajectory_ground_truth_available": false,
+  "optimizer_steps_performed": 0,
+  "topology_edits_performed": 0,
+  "return_consistency_note": "A repeated static renderer output is not evidence of learned spatial memory or future dynamics.",
+  "artifact_hashes": {
+    "camera_path.avi": "afd175316ac99fe5aacc08bfa7b92d8b4d6a14b6263d05055ed289249acdc6d8",
+    "trajectory_float.npz": "f1173cf7ff07185769feec2326d7941e681bba3b23673a63e5441af97caac69b",
+    "render_times.csv": "0b695ba73a7d470454ccbc6db7bae5493906b7508f344d52f9d5160878984938"
+  }
+}

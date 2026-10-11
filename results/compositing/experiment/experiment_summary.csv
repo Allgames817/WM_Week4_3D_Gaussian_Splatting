@@ -1,0 +1,11 @@
+﻿name,max_mass_error,mean_total_alpha,mean_residual,npz,trace,order
+01_baseline,2.220446049250313e-16,0.13189701383948074,0.8681029861605193,01_baseline/input_and_composite.npz,01_baseline/pixel_trace.csv,"0,1,2"
+02_swap_depth_labels,2.220446049250313e-16,0.13189701383948074,0.8681029861605193,02_swap_depth_labels/input_and_composite.npz,02_swap_depth_labels/pixel_trace.csv,"1,0,2"
+03_front_low_opacity,2.220446049250313e-16,0.09669287780843171,0.9033071221915684,03_front_low_opacity/input_and_composite.npz,03_front_low_opacity/pixel_trace.csv,"0,1,2"
+04_front_high_opacity,2.220446049250313e-16,0.14539193265138292,0.8546080673486172,04_front_high_opacity/input_and_composite.npz,04_front_high_opacity/pixel_trace.csv,"0,1,2"
+05_front_transparent,2.220446049250313e-16,0.08789184380066944,0.9121081561993304,05_front_transparent/input_and_composite.npz,05_front_transparent/pixel_trace.csv,"0,1,2"
+06_front_wider,2.220446049250313e-16,0.290996357185167,0.7090036428148331,06_front_wider/input_and_composite.npz,06_front_wider/pixel_trace.csv,"0,1,2"
+07_white_background,2.220446049250313e-16,0.13189701383948074,0.8681029861605193,07_white_background/input_and_composite.npz,07_white_background/pixel_trace.csv,"0,1,2"
+08_front_color_only,2.220446049250313e-16,0.13189701383948074,0.8681029861605193,08_front_color_only/input_and_composite.npz,08_front_color_only/pixel_trace.csv,"0,1,2"
+09_less_overlap,2.220446049250313e-16,0.15114268196459568,0.8488573180354044,09_less_overlap/input_and_composite.npz,09_less_overlap/pixel_trace.csv,"0,1,2"
+10_background_only,0.0,0.0,1.0,10_background_only/input_and_composite.npz,10_background_only/pixel_trace.csv,"0,1,2"

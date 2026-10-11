@@ -1,0 +1,520 @@
+{
+  "day": "WM-W04-DAY7",
+  "timestamp_utc": "2026-10-11T18:27:22.726371+00:00",
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "H:\\anaconda3\\envs\\wm_gsplat\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "gsplat": "1.5.3+pt24cu124",
+    "numpy": "1.26.4",
+    "Pillow": "10.4.0"
+  },
+  "source_hashes": {
+    "audit_week4.py": "a01177a49718a6cbaa7d3e02f7908947f935d5ab375e1901acaa76c4752c4c45",
+    "check_day7.py": "bae4518ee5460137566ea1764717a168ac8bc2000889ad955441ed32f870816c",
+    "day7_exercise.py": "a50145d7b12e51195ec6aa5e2d2958ea1d0921226f4f434b62f0e0b4eb61b3f9",
+    "evidence_io.py": "d3bf1d864cdedaa822e05988910bcf28360517ba5a9a463bd746d91cf86a38c0",
+    "render_review.py": "3d4b0df3261fa5e7911810957f990d9cf1cfa7f8ca8d7355dee1dff1cf654d85",
+    "run_interface.py": "d44fcaeb63b59b3595ad6f1175a5364bc65369750d629e3546c1a754794fadc2",
+    "support.py": "51d1dba502472fb09d441958d8610536ae61627cf9267614e1a25b59bbba7a8c",
+    "video_io.py": "931a9becfff3d3485f288ef127ad2f5f88fcab8edbe8ed2e7105a4b4aae0280e"
+  },
+  "status": "PASSED",
+  "input_evidence_sha256": {
+    "D:\\WM_Study\\Daily\\Week4_Day5\\data\\day5_scene\\dataset_manifest.json": "c54eaf1a94119d886d8f425ac5fc63a4b8fb04ab636ab84962c232e32d0db524",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\data\\day5_scene\\scene.npz": "51d579640f0ecc5b28906eff9f0f716b90042eda0539d4e0fdc22fce04185af5",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\appearance\\training_report.json": "aa11cdb8086b243ebd1a14ff74eecaaf11ddd1adda7ea10742adf09dd090f47e",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\appearance\\checkpoint.pt": "657b79682fd6ad55eab01cd6b4b7e0a084382983dbab84e839e2b0b64341ee8d",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\check_day5.py": "b23e7bbfc72e362007934896c2476c96cdabd39c67647655334c04f30be4b856",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\dataset_support.py": "60a29bbd966c74f276df606f9a670a1f74dbef94b1545eb520b733a8d5749213",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\day5_exercise.py": "b5435ae5f806aa9e4d89c27868d06a94fd36428842a771357488ba0fef7614ea",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\evaluate_day5.py": "3b42b86ae5b07af9f556c3c447f2d26d27865ed67e2088150a158c181fd87c9e",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\fixtures_day5.py": "00d583638045a5211e7b372e3a158e5dcd2e8dfe2162981ed6c4f58a75712d9f",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\metrics_and_io.py": "73e30d63adb20ab3dbc7fc90399e8dd811a60ec738a3f25578c6f9512dfd908f",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\optimization_support.py": "6efb3bdb9ce56cec42fdde2b0c62fa912493492b1ea936018ade1d0f68b53f9a",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\prepare_scene.py": "d572163a809159a505ded1d47880cc65bc955f83f7a9fa11c99d765b0d742593",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\renderer_bridge.py": "9945736fec487d11beb746f25fd82cebf3183a82788935145cac52277722837c",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\runtime_support.py": "a8e2357a83503219eb7ddbc6294a929e70f9976948a9fa4e5735305da5142dc9",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\train_day5.py": "21e7cdd60818e01cf0b3e7b13697ec46159c40fb2dcc1a22db75b79411012049",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\appearance\\train_log.csv": "cac160dd1255865b083fa47b2c7c42a0548fb239be6ec0e528a09c4ba3e8bcb4",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\appearance\\initial\\rgb_float.npz": "f00b770cd85775d7553222c33de40e203af918f29948142d5ada0ba58a41a43d",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\appearance\\final\\rgb_float.npz": "b126d5172753897621ad5ef348237ec5438ce98e27bddf607a274fe198ca6955",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\appearance\\initial\\metrics.json": "4db3ab05a4725e2f97ec73cbfa6db20ee3ce9867793ad8bd7b801d521e79845c",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\appearance\\final\\metrics.json": "3f25d3ef172f8f79b81c8abbe243cf1bde29fe19608ecbadbd525c89295fbc87",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\appearance_reload\\evaluation_report.json": "310f36de1d7af3300e2bcb0f3ccbdd27415d215782206d87fcfb82507bfe3468",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\appearance_reload\\rgb_float.npz": "b126d5172753897621ad5ef348237ec5438ce98e27bddf607a274fe198ca6955",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\joint\\training_report.json": "71b5e4d56a9ba05f61a14fd8c5937d535253fbe474b29cc7d35bc11396e97f32",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\joint\\checkpoint.pt": "bd56a486149bcb4a70306ac23005aac416d00d7980bdc663ebef6d6789e094c5",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\joint\\train_log.csv": "352067bdf316086a947700d15d6a22bf1d287bdf04fe19d20dfdf10197d7d822",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\joint\\initial\\rgb_float.npz": "f00b770cd85775d7553222c33de40e203af918f29948142d5ada0ba58a41a43d",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\joint\\final\\rgb_float.npz": "386711270b46007300aa7ac11217f4e149c4216650f254b657047ff57e3725c1",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\joint\\initial\\metrics.json": "4db3ab05a4725e2f97ec73cbfa6db20ee3ce9867793ad8bd7b801d521e79845c",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\joint\\final\\metrics.json": "a47470d788dfc0f781a1372c633aca136fd5333507cf948244fd7c20df2d17c8",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\joint_reload\\evaluation_report.json": "a3175cf42d5e846afbef53805d9029bab2dbe9368e8e8eee7bef58b73fd23499",
+    "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\joint_reload\\rgb_float.npz": "386711270b46007300aa7ac11217f4e149c4216650f254b657047ff57e3725c1",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\fixed\\training_report.json": "ece4142bca7b9f0f89925a57f167c2d835017732cd8ee0f2a07f3ea15c2eacfb",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\fixed\\checkpoint.pt": "e30ce90b1e0626b4b08d8c535b846e5710f9477368748566738680085ed89793",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\audit_edits.py": "e33f4858f25ceb113502c227cf87d73a498fa6299c39b72b42c8b3cd87e00110",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\check_day6.py": "3eb7109be8b0401b3417070d33762bbc18d3292d6ecff8b2bedc137c6bb88cf1",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\compare_runs.py": "1cb67ad6dc6e52f73d9fa9254a13829b55f66dfe397a8fe47b9ee9a50a898ae9",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\contracts.py": "1d25d4bdd3347e38d74acfddc0ff7b45154e8b6c84ef97f9c2444ad56cee6bbd",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\dataset_support.py": "77a9d20df14faac9f178c796cb0407daf09bfaa229a5dc6b8bb0cab78a53aa30",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\day5_bridge.py": "98ed002ad0abf96e1332b52cfba6b635ed2f4f7c35239cb6e6526bf9153837e0",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\day6_exercise.py": "2335ad7e5763c0fe69034121be4a1a8aac6f5a0b1d68b44b51846535a1e2bda1",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\evaluate_day6.py": "9d45873582ebc3086b544527239d65b661235946636230317566eff60a57e481",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\experiment_support.py": "9e1d175fe2c0d9e119c69d791b7920bdd8817cc63a4e2ea0138039d44a62e86f",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\fixtures_day6.py": "10aa7453408088ea0e834757b806c89039e6e7cfd6bebd2e19a2ec7165d85050",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\metrics_and_io.py": "73e30d63adb20ab3dbc7fc90399e8dd811a60ec738a3f25578c6f9512dfd908f",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\refinement_support.py": "1eb10bdf28160ca8fc265d4abb4a851a347f7bc49b7cac38a85a5ebfa6395c90",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\renderer_bridge.py": "22e0955dbd27135816b8272d69b8f890ad4d45eabf8ef8bfd2974c2c4d0deaa2",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runtime_support.py": "57c6cef9b843b88fa616e6cb2fbf819e1ee29210907ffabd4a1d00e041d7f963",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\train_day6.py": "dea148f7667f61b02b9d565895acf43ba6b6e349616dbac551d6bdb01877cff7",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\fixed\\train_log.csv": "9e88798e09197d6bab44ff41ea08587a76a29d84600a15eaffd4c5f3d5290408",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\fixed\\initial\\rgb_float.npz": "386711270b46007300aa7ac11217f4e149c4216650f254b657047ff57e3725c1",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\fixed\\final\\rgb_float.npz": "142351d3f7ae19f8e1a00e1a592603811c5f4e666dd0013da03cdb106eae9f85",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\fixed\\initial\\metrics.json": "a47470d788dfc0f781a1372c633aca136fd5333507cf948244fd7c20df2d17c8",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\fixed\\final\\metrics.json": "f618ededa8b4b93ebc6c5030b0d4cf8683af03eb7e8c36dd6012887e643b703d",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\fixed_reload\\evaluation_report.json": "2dc0d66141576cb16390e7b20a55866c6ad7b4da87832b0ac544e1e7fd3c0c80",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\fixed_reload\\rgb_float.npz": "142351d3f7ae19f8e1a00e1a592603811c5f4e666dd0013da03cdb106eae9f85",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\adaptive\\training_report.json": "0d63e5efa542ecc662c60eb497a2e4b2fa429390657137a911e557e8fa6b8aa9",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\adaptive\\checkpoint.pt": "98e988e288ef23deaeece24263091c8812d48d84ec1432ba15ea7c2933a3431d",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\adaptive\\train_log.csv": "baea4d11b535aef71bf188553dae9b2a2930d0eddd6f990bd14402ddd2a8ff69",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\adaptive\\initial\\rgb_float.npz": "386711270b46007300aa7ac11217f4e149c4216650f254b657047ff57e3725c1",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\adaptive\\final\\rgb_float.npz": "850cf8072e87dde2fefa8a1c5a02abc30d4d63283fb7fb3101d21daa5c0961e6",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\adaptive\\initial\\metrics.json": "a47470d788dfc0f781a1372c633aca136fd5333507cf948244fd7c20df2d17c8",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\adaptive\\final\\metrics.json": "e393fd6b7a329231e182edaa20950461417bc2ca66917d7789d54b084c7703a0",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\adaptive_reload\\evaluation_report.json": "790b07c80dafafba47b6a91233404ce8aec13876ff5efa4fbf3f1b2de44f0d28",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\adaptive_reload\\rgb_float.npz": "850cf8072e87dde2fefa8a1c5a02abc30d4d63283fb7fb3101d21daa5c0961e6",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\fixed\\events.json": "5e39454adf26ff4876976db63d45cff4a7afbb0cf18c7d0402f093fff1caaee6",
+    "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\adaptive\\events.json": "6a55f8bd8d9b44807aeb905cfd693c4ec8b8f33c361fea4cdd730d7b83613986"
+  },
+  "input_paths": {
+    "day5_root": "D:\\WM_Study\\Daily\\Week4_Day5",
+    "day6_root": "D:\\WM_Study\\Daily\\Week4_Day6",
+    "data": "D:\\WM_Study\\Daily\\Week4_Day5\\data\\day5_scene",
+    "appearance": "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\appearance",
+    "joint": "D:\\WM_Study\\Daily\\Week4_Day5\\runs\\joint",
+    "fixed": "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\fixed",
+    "adaptive": "D:\\WM_Study\\Daily\\Week4_Day6\\runs\\adaptive"
+  },
+  "dataset_sha256": "51d579640f0ecc5b28906eff9f0f716b90042eda0539d4e0fdc22fce04185af5",
+  "rows": [
+    {
+      "run": "appearance",
+      "stage": "initial",
+      "day": 5,
+      "gaussian_count": 12,
+      "completed_updates": 0,
+      "train_mse": 0.0037447225928114473,
+      "train_psnr_db": 24.265803490922945,
+      "val_mse": 0.00374176269355963,
+      "val_psnr_db": 24.2692375936557,
+      "train_contrast_mse": 0.008941755404155741,
+      "val_contrast_mse": 0.008938233366087964
+    },
+    {
+      "run": "appearance",
+      "stage": "final",
+      "day": 5,
+      "gaussian_count": 12,
+      "completed_updates": 600,
+      "train_mse": 0.003034729496142319,
+      "train_psnr_db": 25.17880014166433,
+      "val_mse": 0.0030328829157739135,
+      "val_psnr_db": 25.18144355272853,
+      "train_contrast_mse": 0.0074668974487805,
+      "val_contrast_mse": 0.007464578627171455
+    },
+    {
+      "run": "joint",
+      "stage": "initial",
+      "day": 5,
+      "gaussian_count": 12,
+      "completed_updates": 0,
+      "train_mse": 0.0037447225928114473,
+      "train_psnr_db": 24.265803490922945,
+      "val_mse": 0.00374176269355963,
+      "val_psnr_db": 24.2692375936557,
+      "train_contrast_mse": 0.008941755404155741,
+      "val_contrast_mse": 0.008938233366087964
+    },
+    {
+      "run": "joint",
+      "stage": "final",
+      "day": 5,
+      "gaussian_count": 12,
+      "completed_updates": 600,
+      "train_mse": 4.377642574834875e-06,
+      "train_psnr_db": 53.5875970053733,
+      "val_mse": 4.374847007976413e-06,
+      "val_psnr_db": 53.590371300138735,
+      "train_contrast_mse": 1.095720074323054e-05,
+      "val_contrast_mse": 1.0944281001724375e-05
+    },
+    {
+      "run": "fixed",
+      "stage": "initial",
+      "day": 6,
+      "gaussian_count": 12,
+      "completed_updates": 600,
+      "train_mse": 4.377642574834875e-06,
+      "train_psnr_db": 53.5875970053733,
+      "val_mse": 4.374847007976413e-06,
+      "val_psnr_db": 53.590371300138735,
+      "train_contrast_mse": 1.095720074323054e-05,
+      "val_contrast_mse": 1.0944281001724375e-05
+    },
+    {
+      "run": "fixed",
+      "stage": "final",
+      "day": 6,
+      "gaussian_count": 12,
+      "completed_updates": 900,
+      "train_mse": 4.43729359182331e-06,
+      "train_psnr_db": 53.5288183540548,
+      "val_mse": 4.420215765194319e-06,
+      "val_psnr_db": 53.545565307988255,
+      "train_contrast_mse": 1.1005229201715245e-05,
+      "val_contrast_mse": 1.096323678333945e-05
+    },
+    {
+      "run": "adaptive",
+      "stage": "initial",
+      "day": 6,
+      "gaussian_count": 12,
+      "completed_updates": 600,
+      "train_mse": 4.377642574834875e-06,
+      "train_psnr_db": 53.5875970053733,
+      "val_mse": 4.374847007976413e-06,
+      "val_psnr_db": 53.590371300138735,
+      "train_contrast_mse": 1.095720074323054e-05,
+      "val_contrast_mse": 1.0944281001724375e-05
+    },
+    {
+      "run": "adaptive",
+      "stage": "final",
+      "day": 6,
+      "gaussian_count": 14,
+      "completed_updates": 900,
+      "train_mse": 1.7960666531134273e-06,
+      "train_psnr_db": 57.456775504402984,
+      "val_mse": 1.7794864812052067e-06,
+      "val_psnr_db": 57.497053069915665,
+      "train_contrast_mse": 4.3727420369473675e-06,
+      "val_contrast_mse": 4.338927012366602e-06
+    }
+  ],
+  "recomputed_metrics": {
+    "appearance": {
+      "initial": {
+        "train": {
+          "sse": 345.11363415350297,
+          "scalar_count": 92160,
+          "mse": 0.0037447225928114473,
+          "psnr_db": 24.265803490922945,
+          "psnr_is_infinite": false,
+          "max_abs_error": 0.426170751452446,
+          "contrast_mask_pixel_count": 12176,
+          "contrast_mask_mse": 0.008941755404155741,
+          "view_ids": [
+            0,
+            2,
+            3,
+            4,
+            6
+          ]
+        },
+        "val": {
+          "sse": 137.9363399353822,
+          "scalar_count": 36864,
+          "mse": 0.00374176269355963,
+          "psnr_db": 24.2692375936557,
+          "psnr_is_infinite": false,
+          "max_abs_error": 0.4160337448120117,
+          "contrast_mask_pixel_count": 4869,
+          "contrast_mask_mse": 0.008938233366087964,
+          "view_ids": [
+            1,
+            5
+          ]
+        }
+      },
+      "final": {
+        "train": {
+          "sse": 279.6806703644761,
+          "scalar_count": 92160,
+          "mse": 0.003034729496142319,
+          "psnr_db": 25.17880014166433,
+          "psnr_is_infinite": false,
+          "max_abs_error": 0.43230757117271423,
+          "contrast_mask_pixel_count": 12176,
+          "contrast_mask_mse": 0.0074668974487805,
+          "view_ids": [
+            0,
+            2,
+            3,
+            4,
+            6
+          ]
+        },
+        "val": {
+          "sse": 111.80419580708954,
+          "scalar_count": 36864,
+          "mse": 0.0030328829157739135,
+          "psnr_db": 25.18144355272853,
+          "psnr_is_infinite": false,
+          "max_abs_error": 0.4241615831851959,
+          "contrast_mask_pixel_count": 4869,
+          "contrast_mask_mse": 0.007464578627171455,
+          "view_ids": [
+            1,
+            5
+          ]
+        }
+      }
+    },
+    "joint": {
+      "initial": {
+        "train": {
+          "sse": 345.11363415350297,
+          "scalar_count": 92160,
+          "mse": 0.0037447225928114473,
+          "psnr_db": 24.265803490922945,
+          "psnr_is_infinite": false,
+          "max_abs_error": 0.426170751452446,
+          "contrast_mask_pixel_count": 12176,
+          "contrast_mask_mse": 0.008941755404155741,
+          "view_ids": [
+            0,
+            2,
+            3,
+            4,
+            6
+          ]
+        },
+        "val": {
+          "sse": 137.9363399353822,
+          "scalar_count": 36864,
+          "mse": 0.00374176269355963,
+          "psnr_db": 24.2692375936557,
+          "psnr_is_infinite": false,
+          "max_abs_error": 0.4160337448120117,
+          "contrast_mask_pixel_count": 4869,
+          "contrast_mask_mse": 0.008938233366087964,
+          "view_ids": [
+            1,
+            5
+          ]
+        }
+      },
+      "final": {
+        "train": {
+          "sse": 0.40344353969678215,
+          "scalar_count": 92160,
+          "mse": 4.377642574834875e-06,
+          "psnr_db": 53.5875970053733,
+          "psnr_is_infinite": false,
+          "max_abs_error": 0.04706721007823944,
+          "contrast_mask_pixel_count": 12176,
+          "contrast_mask_mse": 1.095720074323054e-05,
+          "view_ids": [
+            0,
+            2,
+            3,
+            4,
+            6
+          ]
+        },
+        "val": {
+          "sse": 0.1612743601020425,
+          "scalar_count": 36864,
+          "mse": 4.374847007976413e-06,
+          "psnr_db": 53.590371300138735,
+          "psnr_is_infinite": false,
+          "max_abs_error": 0.04638424515724182,
+          "contrast_mask_pixel_count": 4869,
+          "contrast_mask_mse": 1.0944281001724375e-05,
+          "view_ids": [
+            1,
+            5
+          ]
+        }
+      }
+    },
+    "fixed": {
+      "initial": {
+        "train": {
+          "sse": 0.40344353969678215,
+          "scalar_count": 92160,
+          "mse": 4.377642574834875e-06,
+          "psnr_db": 53.5875970053733,
+          "psnr_is_infinite": false,
+          "max_abs_error": 0.04706721007823944,
+          "contrast_mask_pixel_count": 12176,
+          "contrast_mask_mse": 1.095720074323054e-05,
+          "view_ids": [
+            0,
+            2,
+            3,
+            4,
+            6
+          ]
+        },
+        "val": {
+          "sse": 0.1612743601020425,
+          "scalar_count": 36864,
+          "mse": 4.374847007976413e-06,
+          "psnr_db": 53.590371300138735,
+          "psnr_is_infinite": false,
+          "max_abs_error": 0.04638424515724182,
+          "contrast_mask_pixel_count": 4869,
+          "contrast_mask_mse": 1.0944281001724375e-05,
+          "view_ids": [
+            1,
+            5
+          ]
+        }
+      },
+      "final": {
+        "train": {
+          "sse": 0.4089409774224363,
+          "scalar_count": 92160,
+          "mse": 4.43729359182331e-06,
+          "psnr_db": 53.5288183540548,
+          "psnr_is_infinite": false,
+          "max_abs_error": 0.025789588689804077,
+          "contrast_mask_pixel_count": 12176,
+          "contrast_mask_mse": 1.1005229201715245e-05,
+          "view_ids": [
+            0,
+            2,
+            3,
+            4,
+            6
+          ]
+        },
+        "val": {
+          "sse": 0.16294683396812337,
+          "scalar_count": 36864,
+          "mse": 4.420215765194319e-06,
+          "psnr_db": 53.545565307988255,
+          "psnr_is_infinite": false,
+          "max_abs_error": 0.02566838264465332,
+          "contrast_mask_pixel_count": 4869,
+          "contrast_mask_mse": 1.096323678333945e-05,
+          "view_ids": [
+            1,
+            5
+          ]
+        }
+      }
+    },
+    "adaptive": {
+      "initial": {
+        "train": {
+          "sse": 0.40344353969678215,
+          "scalar_count": 92160,
+          "mse": 4.377642574834875e-06,
+          "psnr_db": 53.5875970053733,
+          "psnr_is_infinite": false,
+          "max_abs_error": 0.04706721007823944,
+          "contrast_mask_pixel_count": 12176,
+          "contrast_mask_mse": 1.095720074323054e-05,
+          "view_ids": [
+            0,
+            2,
+            3,
+            4,
+            6
+          ]
+        },
+        "val": {
+          "sse": 0.1612743601020425,
+          "scalar_count": 36864,
+          "mse": 4.374847007976413e-06,
+          "psnr_db": 53.590371300138735,
+          "psnr_is_infinite": false,
+          "max_abs_error": 0.04638424515724182,
+          "contrast_mask_pixel_count": 4869,
+          "contrast_mask_mse": 1.0944281001724375e-05,
+          "view_ids": [
+            1,
+            5
+          ]
+        }
+      },
+      "final": {
+        "train": {
+          "sse": 0.16552550275093347,
+          "scalar_count": 92160,
+          "mse": 1.7960666531134273e-06,
+          "psnr_db": 57.456775504402984,
+          "psnr_is_infinite": false,
+          "max_abs_error": 0.017753079533576965,
+          "contrast_mask_pixel_count": 12176,
+          "contrast_mask_mse": 4.3727420369473675e-06,
+          "view_ids": [
+            0,
+            2,
+            3,
+            4,
+            6
+          ]
+        },
+        "val": {
+          "sse": 0.06559898964314874,
+          "scalar_count": 36864,
+          "mse": 1.7794864812052067e-06,
+          "psnr_db": 57.497053069915665,
+          "psnr_is_infinite": false,
+          "max_abs_error": 0.017624571919441223,
+          "contrast_mask_pixel_count": 4869,
+          "contrast_mask_mse": 4.338927012366602e-06,
+          "view_ids": [
+            1,
+            5
+          ]
+        }
+      }
+    }
+  },
+  "events": {
+    "fixed": {
+      "event_windows": 5,
+      "events_with_edits": 0,
+      "total_actions": {
+        "prune": 0,
+        "clone": 0,
+        "split": 0
+      },
+      "gaussian_count_final": 12
+    },
+    "adaptive": {
+      "event_windows": 5,
+      "events_with_edits": 1,
+      "total_actions": {
+        "prune": 0,
+        "clone": 0,
+        "split": 2
+      },
+      "gaussian_count_final": 14
+    }
+  },
+  "checkpoint_sha256": {
+    "appearance": "657b79682fd6ad55eab01cd6b4b7e0a084382983dbab84e839e2b0b64341ee8d",
+    "joint": "bd56a486149bcb4a70306ac23005aac416d00d7980bdc663ebef6d6789e094c5",
+    "fixed": "e30ce90b1e0626b4b08d8c535b846e5710f9477368748566738680085ed89793",
+    "adaptive": "98e988e288ef23deaeece24263091c8812d48d84ec1432ba15ea7c2933a3431d"
+  },
+  "adaptive_minus_fixed_mse": {
+    "train": -2.6412269387098825e-06,
+    "val": -2.640729283989112e-06
+  },
+  "adaptation_triggered": true,
+  "training_execution_claim": "Logs and checkpoints are mutually consistent; this does not independently prove how training was executed.",
+  "limitations": "Same-renderer tiny synthetic scene; near-teacher initialization; neighboring held-out views; one run per treatment. Equal steps are not equal compute. Global RGB MSE includes background. No true-geometry or dynamic-world claim.",
+  "optimizer_steps_performed": 0,
+  "renderer_calls_performed": 0
+}

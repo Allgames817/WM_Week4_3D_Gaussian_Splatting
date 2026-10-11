@@ -1,0 +1,41 @@
+{
+  "mode": "adaptive",
+  "local_steps": 300,
+  "seed": 42,
+  "policy": {
+    "grow_threshold": 0.0002,
+    "small_scale": 0.12,
+    "prune_threshold": 0.005,
+    "max_points": 32,
+    "max_new": 2,
+    "max_prune": 2,
+    "min_points": 4
+  },
+  "refine_after_local_updates": [
+    50,
+    100,
+    150,
+    200,
+    250
+  ],
+  "loss": "all-scalar RGB MSE",
+  "optimizer": "restored Day5 Adam; survivor history retained; new-row moments zero",
+  "split": "deterministic symmetric longest-axis offsets; scale divided by 1.6",
+  "opacity_reset": false,
+  "cameras_fixed": true,
+  "sh_degree": null,
+  "train_ids": [
+    0,
+    2,
+    3,
+    4,
+    6
+  ],
+  "val_ids": [
+    1,
+    5
+  ],
+  "evaluation_selection": "last checkpoint, no validation-selected best",
+  "gradient_collection": "pre-update training render; edit after optimizer step",
+  "view_schedule": "round-robin continued from Day5 completed_updates"
+}

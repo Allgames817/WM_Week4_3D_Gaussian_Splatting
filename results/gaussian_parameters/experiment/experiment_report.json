@@ -1,0 +1,72 @@
+{
+  "timestamp_utc": "2026-10-11T12:05:18.632045+00:00",
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "H:\\anaconda3\\envs\\wm_gsplat\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "gsplat": "1.5.3+pt24cu124",
+    "numpy": "1.26.4",
+    "Pillow": "10.4.0"
+  },
+  "exercise_sha256": "38d52c09662dc40b1d240f1d73380a159e27cf77e46c4cb20c32036ee4363699",
+  "optimizer_steps": 0,
+  "status": "GENERATED",
+  "experiment": "world-space slices, not rasterization",
+  "case_count": 10,
+  "cases_generated": 10,
+  "camera_used": false,
+  "gsplat_used": false,
+  "response_includes_opacity": false,
+  "response_includes_color": false,
+  "grid_size": 161,
+  "display_range": [
+    0,
+    1
+  ],
+  "case_names": [
+    "baseline",
+    "mean_x_plus",
+    "scale_x_double",
+    "scale_all_double",
+    "rotate_z_45",
+    "rotate_y_45",
+    "isotropic",
+    "isotropic_rotate",
+    "opacity_only",
+    "color_only"
+  ],
+  "paired_differences": [
+    {
+      "left": "baseline",
+      "right": "opacity_only",
+      "covariance_max_abs": 0.0,
+      "xy_max_abs": 0.0,
+      "xz_max_abs": 0.0
+    },
+    {
+      "left": "baseline",
+      "right": "color_only",
+      "covariance_max_abs": 0.0,
+      "xy_max_abs": 0.0,
+      "xz_max_abs": 0.0
+    },
+    {
+      "left": "isotropic",
+      "right": "isotropic_rotate",
+      "covariance_max_abs": 0.0,
+      "xy_max_abs": 0.0,
+      "xz_max_abs": 0.0
+    },
+    {
+      "left": "baseline",
+      "right": "rotate_z_45",
+      "covariance_max_abs": 0.013749999999999998,
+      "xy_max_abs": 0.48224921573639473,
+      "xz_max_abs": 0.45741920351373566
+    }
+  ],
+  "input_kind": "hand-authored, activated parameters",
+  "cpu_check_file": "D:\\WM_Study\\Daily\\Week4_Day2\\reports\\check_cpu.json"
+}

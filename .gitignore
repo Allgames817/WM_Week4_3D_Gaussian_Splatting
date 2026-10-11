@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+local_paths.json
+/data/
+/checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.zip
+Thumbs.db
+.DS_Store
+/UPLOAD.md

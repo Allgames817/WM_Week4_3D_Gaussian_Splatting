@@ -1,0 +1,153 @@
+{
+  "timestamp_utc": "2026-10-11T13:58:53.514769+00:00",
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "H:\\anaconda3\\envs\\wm_gsplat\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "gsplat": "1.5.3+pt24cu124",
+    "numpy": "1.26.4",
+    "Pillow": "10.4.0"
+  },
+  "exercise_sha256": "01f94e0867c0b85caf1896168a9a81bcfea814c88f04a70beeb23adbcbe26be1",
+  "optimizer_steps": 0,
+  "source_hashes": {
+    "check_day3.py": "3544a46a1914e60e3312b8310736a82ed327d2bc65cef5c970b18a1e14072509",
+    "compare_gsplat.py": "dfa9a21f184c4764976d670c20a0fe7d9b69d86d61ac00d5e13392c7ed2101b2",
+    "day3_exercise.py": "01f94e0867c0b85caf1896168a9a81bcfea814c88f04a70beeb23adbcbe26be1",
+    "fixtures_day3.py": "041e6d0e151f6d42244f30092570ff3001fe8ba9bde6b59d4d77263bb8a6cc84",
+    "projection_packet.py": "994bf09c148d41661d5f06168a4f585b9354e350a6c8271697095e7e965a8b28",
+    "run_day3.py": "03363797968301f2be771e9ef40956fbc771eeef9068ff13d520cd552ab77772",
+    "runtime_support.py": "ba381fa24d9329e9d43cf2fa292588162c41a3b18d35bbbfb317943d4a726e5a"
+  },
+  "day": "WM-W04-DAY3",
+  "mode": "cpu",
+  "status": "PASSED",
+  "expected_checks": 24,
+  "executed": 24,
+  "passed": 24,
+  "checks": [
+    {
+      "id": "W1",
+      "name": "check_w1_identity",
+      "passed": true
+    },
+    {
+      "id": "W2",
+      "name": "check_w2_camera_translation",
+      "passed": true
+    },
+    {
+      "id": "W3",
+      "name": "check_w3_rotation_direction",
+      "passed": true
+    },
+    {
+      "id": "W4",
+      "name": "check_w4_covariance_rotation",
+      "passed": true
+    },
+    {
+      "id": "W5",
+      "name": "check_w5_multi_camera_multi_gaussian",
+      "passed": true
+    },
+    {
+      "id": "W6",
+      "name": "check_w6_inverse_roundtrip",
+      "passed": true
+    },
+    {
+      "id": "W7",
+      "name": "check_w7_dtype_and_no_mutation",
+      "passed": true
+    },
+    {
+      "id": "W8",
+      "name": "check_w8_autograd",
+      "passed": true
+    },
+    {
+      "id": "P1",
+      "name": "check_p1_on_axis",
+      "passed": true
+    },
+    {
+      "id": "P2",
+      "name": "check_p2_off_axis_depth_derivatives",
+      "passed": true
+    },
+    {
+      "id": "P3",
+      "name": "check_p3_camera_intrinsics_batch",
+      "passed": true
+    },
+    {
+      "id": "P4",
+      "name": "check_p4_jacobian_finite_difference",
+      "passed": true
+    },
+    {
+      "id": "P5",
+      "name": "check_p5_principal_point",
+      "passed": true
+    },
+    {
+      "id": "P6",
+      "name": "check_p6_same_ray_and_no_pixel_clipping",
+      "passed": true
+    },
+    {
+      "id": "P7",
+      "name": "check_p7_depth_policy_and_outside_center",
+      "passed": true
+    },
+    {
+      "id": "P8",
+      "name": "check_p8_dtype_inputs_and_autograd",
+      "passed": true
+    },
+    {
+      "id": "C1",
+      "name": "check_c1_diagonal_units",
+      "passed": true
+    },
+    {
+      "id": "C2",
+      "name": "check_c2_xy_correlation",
+      "passed": true
+    },
+    {
+      "id": "C3",
+      "name": "check_c3_depth_variance_off_axis",
+      "passed": true
+    },
+    {
+      "id": "C4",
+      "name": "check_c4_eps2d_exactly_once",
+      "passed": true
+    },
+    {
+      "id": "C5",
+      "name": "check_c5_focal_scaling",
+      "passed": true
+    },
+    {
+      "id": "C6",
+      "name": "check_c6_same_ray_depth_scaling",
+      "passed": true
+    },
+    {
+      "id": "C7",
+      "name": "check_c7_spd_batch_dtype_and_inputs",
+      "passed": true
+    },
+    {
+      "id": "C8",
+      "name": "check_c8_autograd",
+      "passed": true
+    }
+  ],
+  "rasterization_used": false
+}

@@ -1,0 +1,38 @@
+{
+  "experiment": "joint",
+  "requested_steps": 600,
+  "seed": 42,
+  "trainable_names": [
+    "means",
+    "quats",
+    "log_scales",
+    "opacity_logits",
+    "color_logits"
+  ],
+  "learning_rates": {
+    "means": 0.005,
+    "quats": 0.005,
+    "log_scales": 0.01,
+    "opacity_logits": 0.02,
+    "color_logits": 0.03
+  },
+  "optimizer": "Adam",
+  "loss": "all-scalar RGB MSE",
+  "cameras_fixed": true,
+  "gaussian_count": 12,
+  "densification": false,
+  "pruning": false,
+  "view_schedule": "deterministic round-robin train IDs",
+  "train_ids": [
+    0,
+    2,
+    3,
+    4,
+    6
+  ],
+  "val_ids": [
+    1,
+    5
+  ],
+  "checkpoint_selection": "last, no validation-based selection"
+}

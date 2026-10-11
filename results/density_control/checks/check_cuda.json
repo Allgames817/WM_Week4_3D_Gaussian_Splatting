@@ -1,0 +1,60 @@
+{
+  "day": "WM-W04-DAY6",
+  "timestamp_utc": "2026-10-11T17:52:31.992538+00:00",
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "H:\\anaconda3\\envs\\wm_gsplat\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "gsplat": "1.5.3+pt24cu124",
+    "numpy": "1.26.4",
+    "Pillow": "10.4.0"
+  },
+  "source_hashes": {
+    "audit_edits.py": "e33f4858f25ceb113502c227cf87d73a498fa6299c39b72b42c8b3cd87e00110",
+    "check_day6.py": "3eb7109be8b0401b3417070d33762bbc18d3292d6ecff8b2bedc137c6bb88cf1",
+    "compare_runs.py": "1cb67ad6dc6e52f73d9fa9254a13829b55f66dfe397a8fe47b9ee9a50a898ae9",
+    "contracts.py": "1d25d4bdd3347e38d74acfddc0ff7b45154e8b6c84ef97f9c2444ad56cee6bbd",
+    "dataset_support.py": "77a9d20df14faac9f178c796cb0407daf09bfaa229a5dc6b8bb0cab78a53aa30",
+    "day5_bridge.py": "98ed002ad0abf96e1332b52cfba6b635ed2f4f7c35239cb6e6526bf9153837e0",
+    "day6_exercise.py": "2335ad7e5763c0fe69034121be4a1a8aac6f5a0b1d68b44b51846535a1e2bda1",
+    "evaluate_day6.py": "9d45873582ebc3086b544527239d65b661235946636230317566eff60a57e481",
+    "experiment_support.py": "9e1d175fe2c0d9e119c69d791b7920bdd8817cc63a4e2ea0138039d44a62e86f",
+    "fixtures_day6.py": "10aa7453408088ea0e834757b806c89039e6e7cfd6bebd2e19a2ec7165d85050",
+    "metrics_and_io.py": "73e30d63adb20ab3dbc7fc90399e8dd811a60ec738a3f25578c6f9512dfd908f",
+    "refinement_support.py": "1eb10bdf28160ca8fc265d4abb4a851a347f7bc49b7cac38a85a5ebfa6395c90",
+    "renderer_bridge.py": "22e0955dbd27135816b8272d69b8f890ad4d45eabf8ef8bfd2974c2c4d0deaa2",
+    "runtime_support.py": "57c6cef9b843b88fa616e6cb2fbf819e1ee29210907ffabd4a1d00e041d7f963",
+    "train_day6.py": "dea148f7667f61b02b9d565895acf43ba6b6e349616dbac551d6bdb01877cff7"
+  },
+  "mode": "cuda",
+  "expected_checks": 4,
+  "passed": 4,
+  "executed": 4,
+  "checks": [
+    {
+      "name": "G1_edit_render_forward_and_backward",
+      "status": "PASSED"
+    },
+    {
+      "name": "G2_screen_gradient_statistics",
+      "status": "PASSED"
+    },
+    {
+      "name": "G3_real_update_after_topology_and_step_count",
+      "status": "PASSED"
+    },
+    {
+      "name": "G4_variable_count_float_render_reload",
+      "status": "PASSED"
+    }
+  ],
+  "status": "PASSED",
+  "native": {
+    "version": "1.5.3+pt24cu124",
+    "native_extension": "H:\\anaconda3\\envs\\wm_gsplat\\lib\\site-packages\\gsplat\\csrc.pyd",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "torch_cuda": "12.4"
+  }
+}

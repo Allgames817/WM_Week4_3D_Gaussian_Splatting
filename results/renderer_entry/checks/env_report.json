@@ -1,0 +1,70 @@
+{
+  "timestamp_utc": "2026-10-10T17:20:06.382632+00:00",
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "H:\\anaconda3\\envs\\wm_gsplat\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "numpy": "1.26.4",
+    "torch": "2.4.1+cu124",
+    "torchvision": "0.19.1+cu124",
+    "gsplat": "1.5.3+pt24cu124",
+    "Pillow": "10.4.0",
+    "ninja": "1.11.1.4",
+    "jaxtyping": "0.2.36",
+    "rich": "13.9.4",
+    "typing_extensions": "4.12.2"
+  },
+  "exercise_sha256": "6fa5905cd7bdb90b5e4020cbbef4e834a67b52eae33769f19cc014d2cba29951",
+  "nvidia_smi": {
+    "returncode": 0,
+    "stdout": "Sun Oct 11 01:20:24 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.47                 KMD Version: 610.47        CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4060 ...  WDDM  |   00000000:01:00.0  On |                  N/A |\n| N/A   53C    P0             13W /  115W |    1652MiB /   8188MiB |      1%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A            4488    C+G   ...x86)\\Lenovo\\LeFile\\LeFile.exe      N/A      |\n|    0   N/A  N/A            8308    C+G   ....0.4258.62\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           10404    C+G   ...2p2nqsd0c76g0\\app\\ChatGPT.exe      N/A      |\n|    0   N/A  N/A           11056    C+G   ...ogram Files\\cursor\\Cursor.exe      N/A      |\n|    0   N/A  N/A           11576    C+G   ...SnippingTool\\SnippingTool.exe      N/A      |\n|    0   N/A  N/A           11920    C+G   ...2txyewy\\CrossDeviceResume.exe      N/A      |\n|    0   N/A  N/A           12348    C+G   ...ows\\System32\\NahimicSvc64.exe      N/A      |\n|    0   N/A  N/A           13168    C+G   ...em32\\ApplicationFrameHost.exe      N/A      |\n|    0   N/A  N/A           15672    C+G   ...cw5n1h2txyewy\\WidgetBoard.exe      N/A      |\n|    0   N/A  N/A           16956    C+G   ...IA App\\CEF\\NVIDIA Overlay.exe      N/A      |\n|    0   N/A  N/A           21224    C+G   ...IA App\\CEF\\NVIDIA Overlay.exe      N/A      |\n|    0   N/A  N/A           21564    C+G   ...ainframe\\DesktopAssistant.exe      N/A      |\n|    0   N/A  N/A           22420    C+G   ..._cw5n1h2txyewy\\SearchHost.exe      N/A      |\n|    0   N/A  N/A           25120    C+G   F:\\幕布\\Mubu\\幕布.exe                 N/A      |\n|    0   N/A  N/A           30092    C+G   ...芗仪ㄒ莆募�\\weixin\\Weixin.exe      N/A      |\n|    0   N/A  N/A           30168    C+G   ...5n1h2txyewy\\TextInputHost.exe      N/A      |\n|    0   N/A  N/A           30892    C+G   ...indows\\System32\\ShellHost.exe      N/A      |\n|    0   N/A  N/A           32140    C+G   ...Files\\SakuraCat\\SakuraCat.exe      N/A      |\n|    0   N/A  N/A           32240    C+G   ...ffice6\\promecefpluginhost.exe      N/A      |\n|    0   N/A  N/A           32548    C+G   ...\\codex-computer-use-swift.exe      N/A      |\n|    0   N/A  N/A           32628    C+G   ...2p2nqsd0c76g0\\app\\ChatGPT.exe      N/A      |\n|    0   N/A  N/A           34296    C+G   ...t\\Edge\\Application\\msedge.exe      N/A      |\n|    0   N/A  N/A           34672    C+G   ...t\\Edge\\Application\\msedge.exe      N/A      |\n|    0   N/A  N/A           36824    C+G   ..._8wekyb3d8bbwe\\XboxPcTray.exe      N/A      |\n|    0   N/A  N/A           36848    C+G   ...are\\IntelGraphicsSoftware.exe      N/A      |\n|    0   N/A  N/A           38788    C+G   ...t\\Edge\\Application\\msedge.exe      N/A      |\n|    0   N/A  N/A           41076    C+G   ...ogram Files\\cursor\\Cursor.exe      N/A      |\n|    0   N/A  N/A           46664    C+G   ...8bbwe\\PhoneExperienceHost.exe      N/A      |\n|    0   N/A  N/A           49696    C+G   ...xyewy\\ShellExperienceHost.exe      N/A      |\n|    0   N/A  N/A           53060      C   ...da3\\envs\\wm_gsplat\\python.exe      N/A      |\n|    0   N/A  N/A           59204    C+G   ...ns\\RadiumWMPF\\WeChatAppEx.exe      N/A      |\n|    0   N/A  N/A           62624    C+G   C:\\Windows\\explorer.exe               N/A      |\n|    0   N/A  N/A           64172    C+G   ....0.4258.62\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           64192    C+G   ...芗仪ㄒ莆募�\\weixin\\Weixin.exe      N/A      |\n+-----------------------------------------------------------------------------------------+\n",
+    "stderr": ""
+  },
+  "checks": [
+    {
+      "name": "Pinned Windows environment",
+      "status": "PASS",
+      "detail": {
+        "numpy": "1.26.4",
+        "torch": "2.4.1+cu124",
+        "torchvision": "0.19.1+cu124",
+        "gsplat": "1.5.3+pt24cu124",
+        "Pillow": "10.4.0",
+        "ninja": "1.11.1.4",
+        "jaxtyping": "0.2.36",
+        "rich": "13.9.4",
+        "typing_extensions": "4.12.2"
+      }
+    },
+    {
+      "name": "PyTorch CPU autograd and NumPy bridge",
+      "status": "PASS",
+      "detail": {
+        "cpu_autograd": true,
+        "numpy_roundtrip": true
+      }
+    },
+    {
+      "name": "PyTorch CUDA tensor forward/backward",
+      "status": "PASS",
+      "detail": {
+        "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+        "total_memory_bytes": 8585216000,
+        "torch_cuda": "12.4",
+        "cuda_tensor_backward": true
+      }
+    },
+    {
+      "name": "Precompiled gsplat native extension load",
+      "status": "PASS",
+      "detail": {
+        "distribution_version": "1.5.3+pt24cu124",
+        "native_extension": "H:\\anaconda3\\envs\\wm_gsplat\\Lib\\site-packages\\gsplat\\csrc.pyd"
+      }
+    }
+  ],
+  "passed": 4,
+  "total": 4,
+  "renderer_forward_tested": false,
+  "renderer_backward_tested": false
+}

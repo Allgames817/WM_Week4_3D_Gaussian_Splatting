@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8"><title>Week4 frozen camera path</title>
+<style>body{font-family:system-ui;max-width:900px;margin:32px auto;line-height:1.6}
+img{width:576px;image-rendering:pixelated}button,input{margin:8px}</style>
+<h1>Frozen model: local camera path A → B → A</h1>
+<p>This is a local translation path, not a 360-degree reconstruction or temporal world model.
+Interpolated frames have no held-out RGB ground truth. No optimizer or topology edits run.</p>
+<button id="play">Play / Pause</button><input type="range" id="slider" min="0" value="0"><span id="label"></span>
+<p><img id="frame" alt="Camera-path frame"></p><p><a href="camera_path.avi" download>Uncompressed AVI</a>
+ | <a href="render_report.json">Render checks and timings</a></p>
+<script>const names=["frames/frame_000.png", "frames/frame_001.png", "frames/frame_002.png", "frames/frame_003.png", "frames/frame_004.png", "frames/frame_005.png", "frames/frame_006.png", "frames/frame_007.png", "frames/frame_008.png", "frames/frame_009.png", "frames/frame_010.png", "frames/frame_011.png", "frames/frame_012.png", "frames/frame_013.png", "frames/frame_014.png", "frames/frame_015.png", "frames/frame_016.png", "frames/frame_017.png", "frames/frame_018.png", "frames/frame_019.png", "frames/frame_020.png", "frames/frame_021.png", "frames/frame_022.png", "frames/frame_023.png", "frames/frame_024.png", "frames/frame_025.png", "frames/frame_026.png", "frames/frame_027.png", "frames/frame_028.png", "frames/frame_029.png", "frames/frame_030.png", "frames/frame_031.png", "frames/frame_032.png", "frames/frame_033.png", "frames/frame_034.png", "frames/frame_035.png", "frames/frame_036.png", "frames/frame_037.png", "frames/frame_038.png", "frames/frame_039.png", "frames/frame_040.png", "frames/frame_041.png", "frames/frame_042.png", "frames/frame_043.png", "frames/frame_044.png", "frames/frame_045.png", "frames/frame_046.png", "frames/frame_047.png", "frames/frame_048.png", "frames/frame_049.png", "frames/frame_050.png", "frames/frame_051.png", "frames/frame_052.png", "frames/frame_053.png", "frames/frame_054.png", "frames/frame_055.png", "frames/frame_056.png", "frames/frame_057.png", "frames/frame_058.png", "frames/frame_059.png", "frames/frame_060.png"];let playing=false,idx=0;
+const slider=document.getElementById('slider'),image=document.getElementById('frame');slider.max=names.length-1;
+function show(){image.src=names[idx];slider.value=idx;document.getElementById('label').textContent=idx+' / '+(names.length-1);}
+slider.oninput=()=>{idx=Number(slider.value);show();};document.getElementById('play').onclick=()=>playing=!playing;
+setInterval(()=>{if(playing){idx=(idx+1)%names.length;show();}},83);show();</script>
